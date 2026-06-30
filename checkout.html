@@ -23,52 +23,91 @@
 <main id="main">
   <section class="section" style="padding-top:var(--space-10)">
     <div class="container">
-      <nav class="breadcrumb" style="margin-bottom:1.5rem"><a href="products.html">Catalog</a> › <span>Checkout</span></nav>
-      <h1 style="margin-bottom:2rem">Checkout</h1>
+      <nav class="breadcrumb" style="margin-bottom:1.25rem"><a href="products.html">Catalog</a> › <span>Checkout</span></nav>
+      <h1 style="margin-bottom:1.5rem">Checkout</h1>
+
+      <!-- Stepper -->
+      <ol class="steps-nav" id="steps-nav" aria-label="Checkout steps">
+        <li class="step-dot active" data-dot="1"><span class="step-dot__num">1</span><span class="step-dot__label">Your details</span></li>
+        <span class="step-line" data-line="1"></span>
+        <li class="step-dot" data-dot="2"><span class="step-dot__num">2</span><span class="step-dot__label">Shipping</span></li>
+        <span class="step-line" data-line="2"></span>
+        <li class="step-dot" data-dot="3"><span class="step-dot__num">3</span><span class="step-dot__label">Payment</span></li>
+      </ol>
 
       <div class="checkout-grid" id="checkout-root">
         <div>
-          <form class="form-card card" id="checkout-form" novalidate>
-            <h2 style="margin-bottom:1.25rem">Contact &amp; shipping</h2>
-            <div class="form-row">
-              <div class="field"><label for="co-name">Full name *</label><input class="input" id="co-name" name="name" required></div>
-              <div class="field"><label for="co-email">Email *</label><input class="input" id="co-email" name="email" type="email" required></div>
-            </div>
-            <div class="form-row" style="margin-top:1rem">
-              <div class="field"><label for="co-org">Institution / company *</label><input class="input" id="co-org" name="org" required></div>
-              <div class="field"><label for="co-phone">Phone</label><input class="input" id="co-phone" name="phone" type="tel"></div>
-            </div>
-            <div class="field" style="margin-top:1rem"><label for="co-addr">Shipping address *</label><input class="input" id="co-addr" name="address" required></div>
-            <div class="form-row" style="margin-top:1rem">
-              <div class="field"><label for="co-city">City *</label><input class="input" id="co-city" name="city" required></div>
-              <div class="field"><label for="co-country">Country *</label><input class="input" id="co-country" name="country" required></div>
-            </div>
+          <form id="checkout-form" novalidate>
+            <!-- STEP 1 — DETAILS -->
+            <section class="co-step card form-card" data-step="1">
+              <h2 style="margin-bottom:1.25rem">Your details</h2>
+              <div class="form-row">
+                <div class="field"><label for="co-name">Full name *</label><input class="input" id="co-name" name="name" autocomplete="name" required></div>
+                <div class="field"><label for="co-email">Email *</label><input class="input" id="co-email" name="email" type="email" autocomplete="email" required></div>
+              </div>
+              <div class="form-row" style="margin-top:1rem">
+                <div class="field"><label for="co-org">Institution / company *</label><input class="input" id="co-org" name="org" autocomplete="organization" required></div>
+                <div class="field"><label for="co-phone">Phone</label><input class="input" id="co-phone" name="phone" type="tel" autocomplete="tel"></div>
+              </div>
+              <div class="field" style="margin-top:1rem"><label for="co-addr">Street address *</label><input class="input" id="co-addr" name="address" autocomplete="address-line1" required></div>
+              <div class="form-row" style="margin-top:1rem">
+                <div class="field"><label for="co-city">City *</label><input class="input" id="co-city" name="city" autocomplete="address-level2" required></div>
+                <div class="field"><label for="co-state">State / Province</label><input class="input" id="co-state" name="state" autocomplete="address-level1"></div>
+              </div>
+              <div class="form-row" style="margin-top:1rem">
+                <div class="field"><label for="co-zip">ZIP / Postal code *</label><input class="input" id="co-zip" name="zip" autocomplete="postal-code" required></div>
+                <div class="field"><label for="co-country">Country *</label><input class="input" id="co-country" name="country" autocomplete="country-name" required placeholder="United States"></div>
+              </div>
+              <button type="button" class="btn btn-primary btn-lg btn-block co-next" data-goto="2" style="margin-top:1.5rem">Continue to shipping <i data-icon="arrow-right"></i></button>
+            </section>
 
-            <h2 style="margin:2rem 0 1rem">Payment method</h2>
-            <div class="pay-methods" id="pay-methods">
-              <label class="pay-option"><input type="radio" name="payment" value="Credit / Debit Card" checked><span><b>Credit / Debit card</b><small>Visa · Mastercard · Amex</small></span></label>
-              <label class="pay-option"><input type="radio" name="payment" value="UPI"><span><b>UPI</b><small>GPay · PhonePe · Paytm</small></span></label>
-              <label class="pay-option"><input type="radio" name="payment" value="Bank Transfer"><span><b>Bank transfer</b><small>NEFT / wire</small></span></label>
-              <label class="pay-option"><input type="radio" name="payment" value="PayPal"><span><b>PayPal</b><small>Balance / card</small></span></label>
-              <label class="pay-option"><input type="radio" name="payment" value="Purchase Order / Invoice"><span><b>Purchase order</b><small>Pay on invoice</small></span></label>
-            </div>
-            <p class="text-muted" style="font-size:var(--text-sm);margin-top:.75rem"><i data-icon="lock" style="vertical-align:-3px"></i> Place your order and we'll email you a secure payment link for your chosen method. Card details are never entered or stored on this site.</p>
+            <!-- STEP 2 — SHIPPING -->
+            <section class="co-step card form-card" data-step="2" hidden>
+              <h2 style="margin-bottom:1.25rem">Shipping method</h2>
+              <div class="pay-methods" id="ship-methods">
+                <label class="pay-option ship-option"><input type="radio" name="shipping" value="Standard" data-cost="14" checked><span><b>Standard — $14.00</b><small>3–5 business days · tracked</small></span></label>
+                <label class="pay-option ship-option"><input type="radio" name="shipping" value="Express" data-cost="20"><span><b>Express — $20.00</b><small>1–2 business days · priority cold-chain</small></span></label>
+              </div>
+              <p class="text-muted" style="font-size:var(--text-sm);margin-top:.75rem"><i data-icon="snowflake" style="vertical-align:-3px"></i> Temperature-sensitive items ship in validated cold-chain packaging. International duties/taxes are the buyer's responsibility. See our <a href="shipping.html" style="color:var(--primary)">Shipping Policy</a>.</p>
+              <div class="cluster" style="margin-top:1.5rem;flex-wrap:nowrap">
+                <button type="button" class="btn btn-secondary co-back" data-goto="1"><i data-icon="chevron-right" style="transform:rotate(180deg)"></i> Back</button>
+                <button type="button" class="btn btn-primary btn-block co-next" data-goto="3">Continue to payment <i data-icon="arrow-right"></i></button>
+              </div>
+            </section>
 
-            <div class="field" style="margin-top:1.5rem"><label for="co-notes">Order notes (optional)</label><textarea class="textarea" id="co-notes" name="notes" style="min-height:90px" placeholder="Anything we should know about this research order…"></textarea></div>
+            <!-- STEP 3 — PAYMENT -->
+            <section class="co-step card form-card" data-step="3" hidden>
+              <h2 style="margin-bottom:1.25rem">Payment method</h2>
+              <div class="pay-methods" id="pay-methods">
+                <label class="pay-option"><input type="radio" name="payment" value="Credit / Debit Card" checked><span><b>Credit / Debit card</b><small>Visa · Mastercard · Amex · Discover</small></span></label>
+                <label class="pay-option"><input type="radio" name="payment" value="PayPal"><span><b>PayPal</b><small>PayPal balance or card</small></span></label>
+                <label class="pay-option"><input type="radio" name="payment" value="Apple Pay / Google Pay"><span><b>Apple Pay / Google Pay</b><small>Tap to pay</small></span></label>
+                <label class="pay-option"><input type="radio" name="payment" value="Bank Transfer"><span><b>Bank transfer</b><small>ACH · Wire (SWIFT)</small></span></label>
+                <label class="pay-option"><input type="radio" name="payment" value="Purchase Order / Invoice"><span><b>Purchase order</b><small>Pay on invoice (institutions)</small></span></label>
+              </div>
+              <p class="text-muted" style="font-size:var(--text-sm);margin-top:.75rem"><i data-icon="lock" style="vertical-align:-3px"></i> Place your order and we'll email a secure payment link for your chosen method. Card details are never entered or stored on this site.</p>
 
-            <label class="checkbox" style="margin-top:1.25rem"><input type="checkbox" id="co-ruo" required><span>I certify that I am a qualified researcher or institution and that all products will be used <strong>strictly for laboratory research</strong> — not for human or veterinary consumption — per the <a href="compliance.html" style="color:var(--primary)">Research Use Only Policy</a> and <a href="terms.html" style="color:var(--primary)">Terms</a>.</span></label>
+              <div class="field" style="margin-top:1.5rem"><label for="co-notes">Order notes (optional)</label><textarea class="textarea" id="co-notes" name="notes" style="min-height:88px" placeholder="Anything we should know about this research order…"></textarea></div>
 
-            <button class="btn btn-primary btn-lg btn-block" type="submit" id="co-submit" style="margin-top:1.5rem"><i data-icon="check-circle"></i> Place order</button>
-            <p class="text-muted" style="font-size:var(--text-xs);margin-top:.75rem;text-align:center" id="co-status"></p>
+              <label class="checkbox" style="margin-top:1.25rem"><input type="checkbox" id="co-ruo" required><span>I certify that I am a qualified researcher or institution and that all products will be used <strong>strictly for laboratory research</strong> — not for human or veterinary consumption — per the <a href="compliance.html" style="color:var(--primary)">Research Use Only Policy</a> and <a href="terms.html" style="color:var(--primary)">Terms</a>.</span></label>
+
+              <div class="cluster" style="margin-top:1.5rem;flex-wrap:nowrap">
+                <button type="button" class="btn btn-secondary co-back" data-goto="2"><i data-icon="chevron-right" style="transform:rotate(180deg)"></i> Back</button>
+                <button type="submit" class="btn btn-primary btn-block" id="co-submit"><i data-icon="check-circle"></i> Place order</button>
+              </div>
+              <p class="text-muted" style="font-size:var(--text-xs);margin-top:.75rem;text-align:center" id="co-status"></p>
+            </section>
           </form>
         </div>
 
         <aside class="summary-card card">
           <h2 style="margin-bottom:1rem">Order summary</h2>
           <div id="summary-lines"></div>
+          <div class="summary-row"><span class="text-muted">Subtotal</span> <span id="summary-subtotal">$0.00</span></div>
+          <div class="summary-row"><span class="text-muted">Shipping <span id="summary-ship-label">(Standard)</span></span> <span id="summary-shipping">$14.00</span></div>
           <div class="summary-total"><span>Total</span> <b id="summary-total">$0.00</b></div>
-          <p class="text-muted" style="font-size:var(--text-xs);margin-top:1rem"><i data-icon="snowflake" style="vertical-align:-3px"></i> Cold-chain handling &amp; shipping confirmed after address verification.</p>
-          <a class="btn btn-ghost btn-block btn-sm" href="products.html" style="margin-top:1rem">← Continue shopping</a>
+          <p class="text-muted" style="font-size:var(--text-xs);margin-top:1rem"><i data-icon="shield-check" style="vertical-align:-3px"></i> For Research Use Only · sold to qualified researchers &amp; institutions.</p>
+          <a class="btn btn-ghost btn-block btn-sm" href="products.html" style="margin-top:.75rem">← Continue shopping</a>
         </aside>
       </div>
     </div>
