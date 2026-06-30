@@ -124,7 +124,7 @@
   border-bottom-color: var(--border-subtle);
   box-shadow: var(--shadow-sm);
 }
-.navbar__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: var(--space-4); }
+.navbar__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); width: min(100% - var(--gutter) * 2, var(--container)); margin-inline: auto; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.18rem; letter-spacing: -0.02em; }
 .brand__mark { width: 34px; height: 34px; flex: none; }
 .brand__name b { color: var(--primary); }
