@@ -10,6 +10,12 @@
   const icon = S.icon;
   const page = document.body.dataset.page;
 
+  // category navigation without ?query — stash the category, navigate to /products.html
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('[data-go-cat]');
+    if (a) { try { sessionStorage.setItem('pepcare.cat', a.dataset.goCat); } catch (err) {} }
+  });
+
   const CAT_COLOR = {
     'research-peptides': ['#6366F1', '#A3E635'],
     'amino-acids': ['#06B6D4', '#818CF8'],
@@ -124,7 +130,7 @@
     if (catGrid) {
       catGrid.innerHTML = categories.map((c) => {
         const count = products.filter((p) => p.categoryId === c.id).length;
-        return `<a class="cat-tile" href="products.html?cat=${c.id}" data-reveal="up">
+        return `<a class="cat-tile" href="products.html" data-go-cat="${c.id}" data-reveal="up">
           <div class="cat-tile__icon" style="--c1:${(CAT_COLOR[c.id] || [])[0] || 'var(--primary)'}">${icon(iconForCat(c.icon), { size: 26 })}</div>
           <div><h3>${c.name}</h3><p>${count} compounds</p></div>
           ${icon('arrow-right', { size: 20 })}
@@ -154,8 +160,9 @@
     const search = document.getElementById('catalog-search');
     const sort = document.getElementById('catalog-sort');
     const countEl = document.getElementById('catalog-count');
-    const params = new URLSearchParams(location.search);
-    let state = { q: '', cat: params.get('cat') || 'all', sort: 'featured' };
+    let initialCat = 'all';
+    try { const pc = sessionStorage.getItem('pepcare.cat'); if (pc) { initialCat = pc; sessionStorage.removeItem('pepcare.cat'); } } catch (e) {}
+    let state = { q: '', cat: initialCat, sort: 'featured' };
 
     chipsWrap.innerHTML = [{ id: 'all', name: 'All compounds' }, ...categories]
       .map((c) => `<button class="chip" data-cat="${c.id}" aria-pressed="${c.id === state.cat}">${c.name}</button>`).join('');
@@ -233,7 +240,7 @@
       <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal="fade">
         <a href="index.html">Home</a> ${icon('chevron-right', { size: 14 })}
         <a href="products.html">Catalog</a> ${icon('chevron-right', { size: 14 })}
-        <a href="products.html?cat=${p.categoryId}">${catName(p.categoryId)}</a> ${icon('chevron-right', { size: 14 })}
+        <a href="products.html" data-go-cat="${p.categoryId}">${catName(p.categoryId)}</a> ${icon('chevron-right', { size: 14 })}
         <span>${p.name}</span>
       </nav>
       <div class="product-detail">

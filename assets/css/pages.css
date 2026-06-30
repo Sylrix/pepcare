@@ -31,9 +31,11 @@
 }
 .orbit-chip svg { width: 18px; height: 18px; }
 .orbit-chip { z-index: 4; }
-.orbit-chip.c1 { top: 3%; left: 0; color: var(--verified); }
-.orbit-chip.c2 { top: 40%; right: 0; bottom: auto; color: var(--primary); }
-.orbit-chip.c3 { bottom: 5%; left: 12%; color: var(--accent-strong); }
+.orbit-chip.c1 { top: 0; left: 0; color: var(--verified); }
+.orbit-chip.c2 { top: 2%; right: 0; bottom: auto; color: var(--primary); }
+.orbit-chip.c3 { bottom: 2%; left: 4%; color: var(--accent-strong); }
+/* give the trio breathing room so badges frame (not cover) the vials */
+.hero-products { max-width: 88%; margin-inline: auto; padding-top: 14%; }
 @media (max-width: 520px) { .orbit-chip { font-size: var(--text-xs); padding: 8px 11px; } .orbit-chip.c1 { left: 0; } .orbit-chip.c2 { right: 0; } }
 
 .lab-scene { position: relative; width: min(100%, 400px); margin-inline: auto; }
@@ -351,3 +353,22 @@ body::before { opacity: 0.55; }
   .cat-tile:hover { transform: translateY(-6px) rotate(0.7deg); }
   .testimonial:hover { transform: translateY(-5px) rotate(0.5deg); transition: transform var(--dur-mid) var(--ease-spring); }
 }
+
+/* ============================================================
+   AGE & USE GATE (21+, Research Use Only)
+   ============================================================ */
+.age-gate { position: fixed; inset: 0; z-index: var(--z-toast); display: grid; place-items: center; padding: var(--gutter); background: rgba(18, 14, 32, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); animation: fade-in var(--dur-mid) var(--ease-out); }
+.age-gate__card { width: min(100%, 520px); max-height: 92vh; overflow-y: auto; background: var(--surface-1); border: 1px solid var(--border-subtle); border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl); padding: clamp(1.5rem, 4vw, 2.5rem); text-align: center; animation: scale-in var(--dur-mid) var(--ease-spring); }
+.age-gate__brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; margin-bottom: var(--space-2); }
+.age-gate__brand .brand__mark { width: 34px; height: 34px; }
+.age-gate__brand b { color: var(--primary); }
+.age-gate h2 { margin: var(--space-3) 0; font-size: var(--text-2xl); }
+.age-gate__lead { color: var(--on-surface-secondary); font-size: var(--text-sm); }
+.age-gate__warn { margin: var(--space-4) 0; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); background: color-mix(in srgb, var(--warning) 16%, var(--surface-1)); border: 1px solid color-mix(in srgb, var(--warning) 38%, transparent); font-size: var(--text-sm); color: var(--on-surface); text-align: left; }
+.age-gate__list { text-align: left; margin: var(--space-4) 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); color: var(--on-surface-secondary); font-size: var(--text-sm); }
+.age-gate__actions { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-5); }
+.age-gate__actions .btn { width: 100%; }
+.age-gate__fine { margin-top: var(--space-4); font-size: var(--text-xs); color: var(--on-surface-muted); }
+.age-gate__fine a { color: var(--primary); }
+@media (min-width: 480px) { .age-gate__actions { flex-direction: row; } }
+@media (prefers-reduced-motion: reduce) { .age-gate, .age-gate__card { animation: none; } }

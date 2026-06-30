@@ -37,6 +37,60 @@
     </svg>`;
   const brand = (cls = '') => `<a class="brand ${cls}" href="index.html" aria-label="PepCare home">${brandMark}<span class="brand__name">Pep<b>Care</b></span></a>`;
 
+  // ---------- Age & use gate (21+, Research Use Only) ----------
+  (function ageGate() {
+    let accepted = false;
+    try { accepted = localStorage.getItem('pepcare.age.v1') === 'ok'; } catch (e) {}
+    if (accepted) return;
+    const gate = document.createElement('div');
+    gate.className = 'age-gate';
+    gate.setAttribute('role', 'dialog');
+    gate.setAttribute('aria-modal', 'true');
+    gate.setAttribute('aria-labelledby', 'age-gate-title');
+    gate.innerHTML = `
+      <div class="age-gate__card" role="document">
+        <div class="age-gate__brand">${brandMark}<span class="brand__name">Pep<b>Care</b></span></div>
+        <span class="ruo-tag">Research Use Only</span>
+        <h2 id="age-gate-title">Age &amp; use verification</h2>
+        <p class="age-gate__lead">PepCare supplies high-purity chemical and biochemical reference materials strictly for <strong>in-vitro laboratory research</strong>.</p>
+        <p class="age-gate__warn">⚗ <strong>Not for human or veterinary consumption.</strong> These products are not drugs, supplements, foods, or medical devices, and are not intended to diagnose, treat, cure, or prevent any condition.</p>
+        <ul class="age-gate__list">
+          <li>I am at least <strong>21 years of age</strong>.</li>
+          <li>I am a qualified researcher, or represent a research institution.</li>
+          <li>I will use all products <strong>solely for laboratory research</strong> — never for human or animal use.</li>
+        </ul>
+        <div class="age-gate__actions">
+          <button class="btn btn-primary btn-lg" id="age-ok" type="button">I confirm — Enter site</button>
+          <button class="btn btn-secondary" id="age-no" type="button">I do not agree — Exit</button>
+        </div>
+        <p class="age-gate__fine">By entering you also agree to our <a href="terms.html">Terms</a> &amp; <a href="compliance.html">Research Use Only Policy</a>.</p>
+      </div>`;
+    const lock = () => { document.documentElement.style.overflow = 'hidden'; };
+    const mount = () => {
+      document.body.appendChild(gate);
+      lock();
+      const okBtn = gate.querySelector('#age-ok');
+      const noBtn = gate.querySelector('#age-no');
+      okBtn.focus();
+      // keep focus inside the gate
+      gate.addEventListener('keydown', (e) => {
+        if (e.key !== 'Tab') return;
+        const f = gate.querySelectorAll('button, a[href]');
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      });
+      okBtn.addEventListener('click', () => {
+        try { localStorage.setItem('pepcare.age.v1', 'ok'); } catch (e) {}
+        gate.remove();
+        document.documentElement.style.overflow = '';
+      });
+      noBtn.addEventListener('click', () => { location.href = 'https://www.google.com'; });
+    };
+    if (document.body) mount();
+    else document.addEventListener('DOMContentLoaded', mount);
+  })();
+
   // ---------- Build chrome ----------
   const top = document.createElement('div');
   top.innerHTML = `
