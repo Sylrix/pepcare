@@ -1,5 +1,5 @@
 /* ============================================================
-   LAYOUT — injects shared chrome (RUO banner, navbar, mobile menu,
+   LAYOUT, injects shared chrome (RUO banner, navbar, mobile menu,
    footer, scroll progress, toast host) and wires global behaviour
    (theme, scroll state, reveal-on-scroll, counters, marquee).
    ============================================================ */
@@ -18,7 +18,7 @@
   ];
   const isActive = (k) => (k === page || (k === 'catalog' && page === 'product')) ? 'aria-current="page"' : '';
 
-  const RUO_NOTE = 'For Research Use Only — Not for human or veterinary consumption. Sold to qualified researchers & institutions only.';
+  const RUO_NOTE = 'For Research Use Only. Not for human or veterinary consumption. Sold to qualified researchers & institutions only.';
   const FOOT_ABOUT = 'PepCare provides high-purity, third-party-verified research compounds with batch-specific Certificates of Analysis, sold to qualified researchers and institutions for laboratory use only.';
   const FOOT_LEGAL = 'All products are for Research Use Only (RUO). Not for human or veterinary consumption, and not for clinical, diagnostic, or therapeutic use.';
 
@@ -57,11 +57,11 @@
         <ul class="age-gate__list">
           <li>I am at least <strong>21 years of age</strong>.</li>
           <li>I am a qualified researcher, or represent a research institution.</li>
-          <li>I will use all products <strong>solely for laboratory research</strong> — never for human or animal use.</li>
+          <li>I will use all products <strong>solely for laboratory research</strong>, never for human or animal use.</li>
         </ul>
         <div class="age-gate__actions">
-          <button class="btn btn-primary btn-lg" id="age-ok" type="button">I confirm — Enter site</button>
-          <button class="btn btn-secondary" id="age-no" type="button">I do not agree — Exit</button>
+          <button class="btn btn-primary btn-lg" id="age-ok" type="button">Confirm and enter</button>
+          <button class="btn btn-secondary" id="age-no" type="button">Exit</button>
         </div>
         <p class="age-gate__fine">By entering you also agree to our <a href="terms.html">Terms</a> &amp; <a href="compliance.html">Research Use Only Policy</a>.</p>
       </div>`;
@@ -332,7 +332,7 @@
     });
   }
 
-  // ---------- Marquee duplication (clone nodes — no innerHTML reflow) ----------
+  // ---------- Marquee duplication (clone nodes, no innerHTML reflow) ----------
   document.querySelectorAll('.marquee__track').forEach((track) => {
     Array.prototype.slice.call(track.children).forEach((child) => track.appendChild(child.cloneNode(true)));
   });

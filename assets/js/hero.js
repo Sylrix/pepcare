@@ -1,5 +1,5 @@
 /* ============================================================
-   HERO — lightweight animated "molecular constellation" canvas.
+   HERO, lightweight animated "molecular constellation" canvas.
    Particles drift and link to nearby neighbours. Pauses when the
    hero scrolls out of view; disabled for reduced-motion.
    ============================================================ */

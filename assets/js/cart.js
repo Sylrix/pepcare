@@ -1,5 +1,5 @@
 /* ============================================================
-   CART — slide-out drawer, add-to-cart with fly animation,
+   CART, slide-out drawer, add-to-cart with fly animation,
    quantity controls, favourites. Decoupled via SYLRIX.openCart.
    ============================================================ */
 (function () {

@@ -1,5 +1,5 @@
 /* ============================================================
-   CHECKOUT — 3-step flow (details -> shipping -> payment),
+   CHECKOUT, 3-step flow (details -> shipping -> payment),
    shipping cost in the total, and order emailed to the owner
    via Web3Forms (no backend).
 
@@ -130,7 +130,7 @@
     const get = (id) => (document.getElementById(id).value || '').trim();
     const ref = orderRef();
     const c = currency();
-    const itemsText = cache.lines.map((l) => `${l.qty} x ${l.product.name} (${l.product.size}) — ${store.money(l.product.price * l.qty, l.product.currency)}`).join('\n');
+    const itemsText = cache.lines.map((l) => `${l.qty} x ${l.product.name} (${l.product.size}), ${store.money(l.product.price * l.qty, l.product.currency)}`).join('\n');
     const total = store.money(cache.subtotal + shipCost(), c);
     const payment = (form.querySelector('input[name="payment"]:checked') || {}).value || 'Not selected';
     const email = get('co-email');
@@ -147,7 +147,7 @@
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
             access_key: WEB3FORMS_ACCESS_KEY,
-            subject: `New PepCare order ${ref} — ${total}`,
+            subject: `New PepCare order ${ref}, ${total}`,
             from_name: 'PepCare Storefront',
             botcheck: '',
             order_reference: ref,
@@ -162,7 +162,7 @@
             subtotal: store.money(cache.subtotal, c),
             order_total: total,
             notes: get('co-notes'),
-            ruo_certified: 'Yes — research use only',
+            ruo_certified: 'Yes, research use only',
             notify_inbox: ORDER_NOTIFY_EMAIL,
           }),
         });

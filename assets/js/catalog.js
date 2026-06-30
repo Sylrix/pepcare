@@ -1,5 +1,5 @@
 /* ============================================================
-   CATALOG — renders product cards, the filterable catalog page,
+   CATALOG, renders product cards, the filterable catalog page,
    product detail pages, featured grids, and category tiles.
    Each product gets a unique, deterministic "molecule" graphic
    so the store looks rich without external image assets.
@@ -10,7 +10,7 @@
   const icon = S.icon;
   const page = document.body.dataset.page;
 
-  // category navigation without ?query — stash the category, navigate to /products.html
+  // category navigation without ?query, stash the category, navigate to /products.html
   document.addEventListener('click', (e) => {
     const a = e.target.closest('[data-go-cat]');
     if (a) { try { sessionStorage.setItem('pepcare.cat', a.dataset.goCat); } catch (err) {} }
@@ -74,7 +74,7 @@
     const load = big ? 'fetchpriority="high"' : 'loading="lazy"';
     return `<picture>
       <source srcset="${webp}" type="image/webp">
-      <img class="product-card__viz product-img${big ? ' product-img--big' : ''}" src="${p.image}" alt="${p.name} research vial — PepCare" ${load} decoding="async">
+      <img class="product-card__viz product-img${big ? ' product-img--big' : ''}" src="${p.image}" alt="${p.name} research vial, PepCare" ${load} decoding="async">
     </picture>`;
   }
 
@@ -206,7 +206,7 @@
     const root = document.getElementById('product-root');
     if (!p) { root.innerHTML = `<div class="empty-state"><h2>Product not found</h2><p class="text-muted">This compound may have been moved.</p><a class="btn btn-primary" href="products.html">Back to catalog</a></div>`; return; }
 
-    document.title = `${p.name} — PepCare`;
+    document.title = `${p.name}, PepCare`;
     const BASE = 'https://sylrix.github.io/pepcare/';
     const pageUrl = BASE + p.slug + '.html';
     const upsertMeta = (sel, val) => {
@@ -219,7 +219,7 @@
       }
       el.setAttribute('content', val);
     };
-    const titleTag = `${p.name} — PepCare`;
+    const titleTag = `${p.name}, PepCare`;
     upsertMeta('meta[name="description"]', p.shortDescription);
     upsertMeta('meta[property="og:title"]', titleTag);
     upsertMeta('meta[property="og:description"]', p.shortDescription);
@@ -254,7 +254,7 @@
           <div class="cluster" style="gap:1rem"><span class="ruo-tag">Research Use Only</span> <span class="badge badge-verified">${icon('shield-check', { size: 14 })} HPLC-verified</span></div>
           <p class="lead">${p.shortDescription}</p>
           <div class="product-detail__price"><span class="price" style="font-size:var(--text-3xl)">${store.money(p.price, p.currency)}</span> <span class="text-muted">/ ${p.size}</span></div>
-          <div class="stock-dot ${p.inStock ? '' : 'out'}">${p.inStock ? 'In stock — ships within 24h' : 'Currently out of stock'}</div>
+          <div class="stock-dot ${p.inStock ? '' : 'out'}">${p.inStock ? 'In stock, ships within 24h' : 'Currently out of stock'}</div>
           <div class="product-detail__buy">
             <div class="qty qty--lg" id="pd-qty">
               <button data-q="-1" aria-label="Decrease">−</button><span id="pd-qty-val">1</span><button data-q="1" aria-label="Increase">+</button>

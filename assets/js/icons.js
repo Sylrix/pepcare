@@ -1,5 +1,5 @@
 /* ============================================================
-   ICONS — inline SVG registry (stroke icons, currentColor).
+   ICONS, inline SVG registry (stroke icons, currentColor).
    Usage in HTML:  <i data-icon="microscope"></i>
    Or in JS:       SYLRIX.icon("cart", { size: 22 })
    ============================================================ */

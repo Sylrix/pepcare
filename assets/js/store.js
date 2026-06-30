@@ -1,5 +1,5 @@
 /* ============================================================
-   STORE — cart state (localStorage) + tiny pub/sub.
+   STORE, cart state (localStorage) + tiny pub/sub.
    Catalog loading + currency formatting live here too so every
    page shares one source of truth.
    ============================================================ */
