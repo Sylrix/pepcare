@@ -1,5 +1,9 @@
 # Dependencies
 node_modules/
+package-lock.json
+
+# Original full-res source images (optimized copies live in assets/img/products/)
+Pepcare/
 
 # Local dev / tooling (not needed on GitHub Pages)
 .claude/

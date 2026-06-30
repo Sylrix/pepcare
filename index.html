@@ -62,21 +62,20 @@
 
         <div class="hero__visual" data-reveal="scale">
           <div class="lab-scene">
-            <svg class="lab-flask float-slow" viewBox="0 0 220 240" role="img" aria-label="Laboratory flask illustration" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#4F46E5"/></linearGradient>
-                <clipPath id="flaskClip"><path d="M88 34h44v52l46 96a20 20 0 0 1-18 29H60a20 20 0 0 1-18-29l46-96V34z"/></clipPath>
-              </defs>
-              <g clip-path="url(#flaskClip)">
-                <rect x="30" y="150" width="160" height="120" fill="url(#liq)"/>
-                <circle class="bubble" cx="80" cy="200" r="5" fill="#A3E635"/>
-                <circle class="bubble b2" cx="110" cy="210" r="7" fill="#fff" opacity="0.7"/>
-                <circle class="bubble b3" cx="135" cy="205" r="4" fill="#67E8F9"/>
-                <circle class="bubble b4" cx="95" cy="215" r="3" fill="#fff" opacity="0.6"/>
-              </g>
-              <path d="M88 34h44v52l46 96a20 20 0 0 1-18 29H60a20 20 0 0 1-18-29l46-96V34z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" style="color:var(--on-surface)"/>
-              <rect x="80" y="22" width="60" height="16" rx="6" fill="none" stroke="currentColor" stroke-width="5" style="color:var(--on-surface)"/>
-            </svg>
+            <div class="hero-products">
+              <picture class="hero-prod hero-prod--side hero-prod--left">
+                <source srcset="assets/img/products/nad.webp" type="image/webp">
+                <img src="assets/img/products/nad.png" alt="PepCare NAD⁺ research vial" decoding="async">
+              </picture>
+              <picture class="hero-prod hero-prod--main">
+                <source srcset="assets/img/products/glow.webp" type="image/webp">
+                <img src="assets/img/products/glow.png" alt="PepCare GLOW research blend vial" fetchpriority="high" decoding="async">
+              </picture>
+              <picture class="hero-prod hero-prod--side hero-prod--right">
+                <source srcset="assets/img/products/ghk-cu.webp" type="image/webp">
+                <img src="assets/img/products/ghk-cu.png" alt="PepCare GHK-Cu research vial" decoding="async">
+              </picture>
+            </div>
             <span class="orbit-chip c1 float"><i data-icon="shield-check"></i> 99%+ purity</span>
             <span class="orbit-chip c2 bob"><i data-icon="file-text"></i> Batch COA</span>
             <span class="orbit-chip c3 float-slow"><i data-icon="snowflake"></i> Cold-chain</span>

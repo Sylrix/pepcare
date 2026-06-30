@@ -26,13 +26,14 @@
       "molarMass": "663.43 g/mol",
       "purity": "≥98% (HPLC)",
       "form": "Lyophilized powder",
-      "size": "100 mg",
+      "size": "500 mg",
       "storage": "-20°C, desiccated, protect from light",
       "price": 79,
       "currency": "USD",
       "inStock": true,
       "badge": "Best Seller",
       "priority": 100,
+      "image": "assets/img/products/nad.png",
       "tags": [
         "coenzyme",
         "redox",
@@ -64,6 +65,7 @@
       "inStock": true,
       "badge": "New",
       "priority": 99,
+      "image": "assets/img/products/ghk-cu.png",
       "tags": [
         "tripeptide",
         "copper-peptide",
@@ -90,6 +92,7 @@
       "inStock": true,
       "badge": "Best Seller",
       "priority": 98,
+      "image": "assets/img/products/glow.png",
       "tags": [
         "peptide-blend",
         "GHK-Cu",
@@ -122,6 +125,7 @@
       "inStock": true,
       "badge": "New",
       "priority": 97,
+      "image": "assets/img/products/klow.png",
       "tags": [
         "peptide-blend",
         "GHK-Cu",
@@ -152,7 +156,7 @@
       "molarMass": "307.32 g/mol",
       "purity": "≥98% (HPLC)",
       "form": "Lyophilized powder",
-      "size": "1 g",
+      "size": "600 mg",
       "storage": "-20°C, desiccated, protect from light",
       "price": 42,
       "currency": "USD",
@@ -160,6 +164,7 @@
       "inStock": true,
       "badge": "Popular",
       "priority": 96,
+      "image": "assets/img/products/glutathione.png",
       "tags": [
         "tripeptide",
         "antioxidant-reagent",

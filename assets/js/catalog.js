@@ -62,6 +62,16 @@
     </svg>`;
   }
 
+  function mediaHtml(p, big) {
+    if (!p.image) return molecule(p, big);
+    const webp = p.image.replace(/\.png$/, '.webp');
+    const load = big ? 'fetchpriority="high"' : 'loading="lazy"';
+    return `<picture>
+      <source srcset="${webp}" type="image/webp">
+      <img class="product-card__viz product-img${big ? ' product-img--big' : ''}" src="${p.image}" alt="${p.name} research vial — PepCare" ${load} decoding="async">
+    </picture>`;
+  }
+
   function badgeHtml(p) {
     if (!p.badge) return '';
     const cls = /new/i.test(p.badge) ? 'badge-new' : /ref/i.test(p.badge) ? 'badge-accent' : 'badge';
@@ -71,8 +81,8 @@
   function card(p) {
     const fav = store.isFav(p.id) ? 'active' : '';
     return `<article class="product-card" data-reveal="up">
-      <div class="product-card__media">
-        ${molecule(p)}
+      <div class="product-card__media${p.image ? ' has-photo' : ''}">
+        ${mediaHtml(p)}
         <div class="product-card__badges">${badgeHtml(p)}<span class="ruo-tag">RUO</span></div>
         <button class="product-card__fav ${fav}" data-fav="${p.id}" data-fav-name="${p.name}" aria-pressed="${fav ? 'true' : 'false'}" aria-label="${fav ? 'Remove ' + p.name + ' from favourites' : 'Save ' + p.name + ' to favourites'}">${icon('heart', { size: 18 })}</button>
       </div>
@@ -227,8 +237,8 @@
         <span>${p.name}</span>
       </nav>
       <div class="product-detail">
-        <div class="product-detail__media card" data-reveal="left">
-          <div class="product-detail__viz">${molecule(p, true)}</div>
+        <div class="product-detail__media card${p.image ? ' has-photo' : ''}" data-reveal="left">
+          <div class="product-detail__viz">${mediaHtml(p, true)}</div>
           <div class="product-detail__badges">${badgeHtml(p)}<span class="badge-verified badge">${icon('shield-check', { size: 14 })} Verified purity</span></div>
         </div>
         <div class="product-detail__info" data-reveal="right">
