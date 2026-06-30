@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Quotes — Sylrix Research</title>
+  <meta name="description" content="Questions about COAs, storage, bulk pricing, or institutional purchase orders? Contact the Sylrix Research scientific support team.">
+  <meta name="theme-color" content="#4F46E5">
+  <link rel="canonical" href="https://sylrix.github.io/sylrix-research/contact.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — Sylrix Research">
+  <meta property="og:image" content="https://sylrix.github.io/sylrix-research/assets/img/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>(function(){try{var t=localStorage.getItem('sylrix.theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}document.documentElement.classList.add('js');})();</script>
+</head>
+<body data-page="contact">
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <div class="page-header" data-reveal="up">
+        <span class="eyebrow">Get in touch</span>
+        <h1>Talk to our scientific support team</h1>
+        <p>Questions about COAs, storage, or bulk quotes? We're happy to help qualified researchers and institutions.</p>
+      </div>
+
+      <div class="contact-grid" style="margin-top:2.5rem">
+        <div data-reveal="left">
+          <h2>Contact details</h2>
+          <p class="text-muted" style="margin-top:.5rem">Our team replies on business days, usually within one working day.</p>
+          <div class="contact-list">
+            <div class="contact-item"><span class="contact-item__icon"><i data-icon="mail"></i></span><div><b>Email</b><span>hello@sylrixresearch.com</span></div></div>
+            <div class="contact-item"><span class="contact-item__icon"><i data-icon="phone"></i></span><div><b>Phone</b><span>+1 (000) 000-0000 <em class="text-muted">· placeholder</em></span></div></div>
+            <div class="contact-item"><span class="contact-item__icon"><i data-icon="map-pin"></i></span><div><b>Address</b><span>1 Research Parkway, Suite 100, Science Park <em class="text-muted">· placeholder</em></span></div></div>
+            <div class="contact-item"><span class="contact-item__icon"><i data-icon="clock"></i></span><div><b>Hours</b><span>Monday–Friday, 9:00 AM – 6:00 PM (local time)</span></div></div>
+          </div>
+          <div class="card" style="padding:1.25rem;margin-top:1.5rem;border-left:3px solid var(--primary)">
+            <p class="text-muted" style="font-size:var(--text-sm)"><span class="ruo-tag">RUO</span> &nbsp;Products are sold only to qualified researchers and institutions for laboratory research use. By contacting us for orders, you confirm research/institutional intent.</p>
+          </div>
+        </div>
+
+        <form class="form-card card" id="contact-form" data-reveal="right" novalidate>
+          <h2 style="margin-bottom:1.25rem">Send a message</h2>
+          <div class="form-row">
+            <div class="field"><label for="cf-name">Full name *</label><input class="input" id="cf-name" name="name" required></div>
+            <div class="field"><label for="cf-org">Institution / company *</label><input class="input" id="cf-org" name="org" required></div>
+          </div>
+          <div class="form-row" style="margin-top:1rem">
+            <div class="field"><label for="cf-email">Work email *</label><input class="input" id="cf-email" name="email" type="email" required></div>
+            <div class="field"><label for="cf-topic">Topic</label>
+              <select class="select" id="cf-topic" name="topic">
+                <option>General enquiry</option><option>Bulk / custom quote</option><option>COA request</option><option>Purchase order</option><option>Shipping question</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" style="margin-top:1rem"><label for="cf-msg">Message *</label><textarea class="textarea" id="cf-msg" name="message" required placeholder="Tell us what you're researching and what you need…"></textarea></div>
+          <label class="checkbox" style="margin-top:1rem"><input type="checkbox" id="cf-ruo" required><span>I confirm I am a qualified researcher or representative of a research institution, and that any products will be used <strong>for laboratory research only</strong>, not for human or animal consumption.</span></label>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" style="margin-top:1.5rem"><i data-icon="mail"></i> Send message</button>
+          <p class="text-muted" style="font-size:var(--text-xs);margin-top:.75rem;text-align:center">Demo form — connect a form backend (e.g. Formspree, Netlify Forms, or your API) to receive submissions.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/icons.js" defer></script>
+<script src="assets/js/store.js" defer></script>
+<script src="assets/js/layout.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var f = document.getElementById('contact-form');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      window.SYLRIX.toast('Thanks — message captured (demo)', 'check-circle');
+      f.reset();
+    });
+  });
+</script>
+</body>
+</html>

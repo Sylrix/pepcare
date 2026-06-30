@@ -1,0 +1,12 @@
+{
+  "name": "Sylrix Research",
+  "short_name": "Sylrix",
+  "description": "High-purity, third-party-verified research compounds. For Research Use Only.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0A0E1A",
+  "theme_color": "#4F46E5",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Local dev / tooling (not needed on GitHub Pages)
+.claude/
+serve.json
+*.log
+.DS_Store
+Thumbs.db

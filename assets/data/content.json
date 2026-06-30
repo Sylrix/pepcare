@@ -1,0 +1,213 @@
+{
+  "brand": {
+    "name": "Sylrix Research",
+    "tagline": "Research-grade compounds. Verified purity. Strictly for the lab.",
+    "shortPitch": "Sylrix Research supplies qualified scientists and institutions with high-purity, third-party-verified research compounds, each backed by a batch-specific Certificate of Analysis and shipped for laboratory use only."
+  },
+  "hero": {
+    "eyebrow": "Research Use Only - Not for human or veterinary use",
+    "headline": "Compounds your protocol can",
+    "highlight": "actually trust",
+    "subhead": "Every batch is independently tested by HPLC and mass spectrometry, documented with a Certificate of Analysis, and dispatched with cold-chain care - so your results start with materials you can stand behind.",
+    "primaryCta": "Browse Catalog",
+    "secondaryCta": "View COAs",
+    "disclaimer": "All products are sold strictly for in-vitro laboratory research and are not intended for human consumption, clinical, diagnostic, or therapeutic use."
+  },
+  "trustStats": [
+    {
+      "value": 99,
+      "suffix": "%+",
+      "label": "Verified purity on every catalog item"
+    },
+    {
+      "value": 500,
+      "suffix": "+",
+      "label": "Research compounds in catalog"
+    },
+    {
+      "value": 100,
+      "suffix": "%",
+      "label": "Batches shipped with a Certificate of Analysis"
+    },
+    {
+      "value": 24,
+      "suffix": "h",
+      "label": "Typical dispatch on in-stock orders"
+    }
+  ],
+  "valueProps": [
+    {
+      "icon": "microscope",
+      "title": "Independently verified",
+      "text": "Identity and purity confirmed by accredited third-party labs using HPLC and mass spectrometry - never self-reported numbers."
+    },
+    {
+      "icon": "file-check",
+      "title": "Documented by batch",
+      "text": "Each lot ships with its own Certificate of Analysis, so the data you cite matches the vial in your hand."
+    },
+    {
+      "icon": "snowflake",
+      "title": "Handled with care",
+      "text": "Cold-chain packaging and stability-aware logistics keep sensitive compounds intact from our freezer to your bench."
+    }
+  ],
+  "howItWorks": [
+    {
+      "step": "1",
+      "title": "Browse the catalog",
+      "text": "Search by compound, CAS number, or research area. Every listing shows purity, format, and storage requirements up front."
+    },
+    {
+      "step": "2",
+      "title": "Verify the COA",
+      "text": "Open the batch-specific Certificate of Analysis before you buy. Review identity, purity, and third-party test data at your own pace."
+    },
+    {
+      "step": "3",
+      "title": "Order securely",
+      "text": "Confirm your research or institutional use, check out through our secure compliant gateway, and receive clear order tracking."
+    },
+    {
+      "step": "4",
+      "title": "Fast, careful dispatch",
+      "text": "In-stock orders typically ship within 24 hours, packed with cold-chain protection and full documentation."
+    }
+  ],
+  "features": [
+    {
+      "icon": "shield-check",
+      "title": "Third-party testing",
+      "text": "Independent, accredited laboratories test our material so the purity you read is purity you can defend in your methods section."
+    },
+    {
+      "icon": "activity",
+      "title": "HPLC and MS verification",
+      "text": "Identity and purity are confirmed by high-performance liquid chromatography and mass spectrometry on every batch we release."
+    },
+    {
+      "icon": "snowflake",
+      "title": "Cold-chain shipping",
+      "text": "Temperature-sensitive compounds travel in validated cold-chain packaging designed to preserve integrity in transit."
+    },
+    {
+      "icon": "file-text",
+      "title": "Batch-specific COAs",
+      "text": "Download a Certificate of Analysis tied to the exact lot you receive - no generic specs, no guesswork."
+    },
+    {
+      "icon": "lock",
+      "title": "Secure compliant checkout",
+      "text": "Encrypted payments and a documented acceptable-use confirmation keep procurement clean, auditable, and worry-free."
+    },
+    {
+      "icon": "headset",
+      "title": "Responsive scientific support",
+      "text": "Talk to people who understand handling, storage, and documentation - real answers from a team fluent in the lab."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "The batch COAs match what we see on our own instruments. That consistency is exactly what we need to keep our assays reproducible.",
+      "author": "Dr. Elena Marsh",
+      "role": "Principal Investigator",
+      "org": "University Lab",
+      "rating": 5
+    },
+    {
+      "quote": "Cold-chain handling actually held up. Our compounds arrived intact and the documentation was complete and easy to file.",
+      "author": "Dr. Raj Patel",
+      "role": "Lab Manager",
+      "org": "Biotech R&D",
+      "rating": 5
+    },
+    {
+      "quote": "Procurement is usually the slow part. Sylrix made it painless - clear specs, clean paperwork, and dispatch faster than we expected.",
+      "author": "Sofia Lindqvist",
+      "role": "Procurement Specialist",
+      "org": "Research Institute",
+      "rating": 5
+    },
+    {
+      "quote": "Having third-party HPLC and MS data up front saved us a round of in-house QC. The transparency builds real trust.",
+      "author": "Dr. Marcus Cole",
+      "role": "Senior Research Scientist",
+      "org": "Academic Core Facility",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "q": "What does Research Use Only (RUO) mean?",
+      "a": "All Sylrix Research products are intended exclusively for in-vitro laboratory research. They are not drugs, supplements, or medical devices, and are not for human or veterinary consumption, clinical, diagnostic, or therapeutic use."
+    },
+    {
+      "q": "Do your products come with a Certificate of Analysis?",
+      "a": "Yes. Every batch ships with a lot-specific Certificate of Analysis. You can also review COAs on each product page before ordering, including identity and purity results."
+    },
+    {
+      "q": "Who performs your testing?",
+      "a": "Identity and purity are verified by independent, accredited third-party laboratories using HPLC and mass spectrometry. We publish the data rather than relying on self-reported figures."
+    },
+    {
+      "q": "How are products shipped and stored?",
+      "a": "Temperature-sensitive compounds ship in validated cold-chain packaging. Each product page lists recommended storage conditions so you can preserve stability once it reaches your lab."
+    },
+    {
+      "q": "Who is allowed to order?",
+      "a": "Orders are accepted only from qualified researchers, laboratories, and institutions for legitimate research purposes. By ordering, you confirm you are purchasing for research use and will not use products for human or animal consumption."
+    },
+    {
+      "q": "What is your returns policy?",
+      "a": "Because these are sensitive research materials, returns are limited. If an order arrives damaged, incorrect, or out of specification, contact support promptly and we will arrange a replacement or resolution."
+    },
+    {
+      "q": "Do you ship internationally?",
+      "a": "We ship to many regions, subject to local regulations and import requirements. Some compounds may be restricted in certain jurisdictions - the buyer is responsible for ensuring compliance with applicable local laws."
+    },
+    {
+      "q": "What payment methods do you accept?",
+      "a": "We accept major payment methods through a secure, encrypted, PCI-compliant checkout. Institutional purchase orders may be available for qualified accounts - contact us to set one up."
+    },
+    {
+      "q": "Do you offer bulk pricing or custom quotes?",
+      "a": "Yes. For larger quantities, recurring orders, or custom requirements, request a quote and our team will prepare pricing and lead times tailored to your project."
+    }
+  ],
+  "about": {
+    "mission": "To give researchers a supply chain they never have to second-guess - high-purity compounds, verified by independent labs, documented to the batch, and delivered for research use only.",
+    "story": "Sylrix Research was founded by scientists who were tired of inconsistent materials and missing paperwork derailing good experiments. We built the supplier we always wanted: rigorous third-party testing, transparent batch-level documentation, and logistics that respect the chemistry. Today we serve academic labs, core facilities, and biotech teams who measure us by the reproducibility of their results.",
+    "qualityCommitment": "Every batch is tested by accredited third-party laboratories using HPLC and mass spectrometry, released only when it meets specification, and shipped with a lot-specific Certificate of Analysis. If material does not meet our standard, it does not ship.",
+    "complianceNote": "Sylrix Research products are sold strictly for Research Use Only. They are not for human or veterinary consumption and make no medical, therapeutic, or diagnostic claims. Products are sold only to qualified researchers and institutions for legitimate laboratory research, and buyers are responsible for handling, storage, and use in accordance with applicable laws and institutional policies.",
+    "values": [
+      {
+        "title": "Verifiable over verbal",
+        "text": "We back claims with independent data. If we cannot test and document it, we do not say it."
+      },
+      {
+        "title": "Transparency by default",
+        "text": "Batch COAs, storage guidance, and specifications are available up front - not on request, not after the sale."
+      },
+      {
+        "title": "Respect for the science",
+        "text": "Reproducible research depends on dependable materials. We treat your protocol as if it were our own."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "title": "Start with materials you can trust",
+    "text": "Browse the catalog, review batch COAs, and order research compounds backed by independent verification - dispatched fast, documented in full.",
+    "button": "Browse Catalog"
+  },
+  "contact": {
+    "email": "hello@sylrixresearch.com",
+    "phone": "+1 (000) 000-0000",
+    "address": "1 Research Parkway, Suite 100, Science Park, ST 00000",
+    "hours": "Monday to Friday, 9:00 AM - 6:00 PM (local time)",
+    "supportNote": "Questions about COAs, storage, or bulk quotes? Our scientific support team is happy to help qualified researchers and institutions."
+  },
+  "footer": {
+    "about": "Sylrix Research provides high-purity, third-party-verified research compounds with batch-specific Certificates of Analysis, sold to qualified researchers and institutions for laboratory use only.",
+    "legalNote": "All products are for Research Use Only (RUO). Not for human or veterinary consumption, and not for clinical, diagnostic, or therapeutic use. Sold exclusively to qualified researchers and institutions. No medical or therapeutic claims are made."
+  }
+}

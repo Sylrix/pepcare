@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /checkout.html
+
+Sitemap: https://sylrix.github.io/sylrix-research/sitemap.xml

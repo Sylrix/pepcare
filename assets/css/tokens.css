@@ -1,0 +1,220 @@
+/* ============================================================
+   SYLRIX RESEARCH — DESIGN TOKENS
+   Scientific + trustworthy aesthetic, playful smooth motion.
+   Light + dark mode. 8pt spacing grid. Fluid type scale.
+   ============================================================ */
+
+:root {
+  /* ---- Brand color ramps ---- */
+  --indigo-50:  #EEF0FF;
+  --indigo-100: #E0E3FF;
+  --indigo-200: #C4C9FF;
+  --indigo-300: #A5ABFF;
+  --indigo-400: #818CF8;
+  --indigo-500: #6366F1;
+  --indigo-600: #4F46E5;
+  --indigo-700: #4338CA;
+  --indigo-800: #3730A3;
+
+  --cyan-300: #67E8F9;
+  --cyan-400: #22D3EE;
+  --cyan-500: #06B6D4;
+  --cyan-600: #0891B2;
+
+  --lime-300: #BEF264;
+  --lime-400: #A3E635;
+  --lime-500: #84CC16;
+
+  --green-400: #34D399;
+  --green-500: #10B981;
+  --green-600: #059669;
+
+  --amber-400: #FBBF24;
+  --rose-500:  #F43F5E;
+  --magenta-500: #EC4899;
+
+  /* ---- Neutral ramp (cool, slightly blue) ---- */
+  --gray-0:   #FFFFFF;
+  --gray-25:  #FBFCFE;
+  --gray-50:  #F5F8FC;
+  --gray-100: #EDF1F8;
+  --gray-150: #E3E9F3;
+  --gray-200: #D6DEEC;
+  --gray-300: #B9C4D8;
+  --gray-400: #8A98B3;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+  --gray-950: #0A0E1A;
+
+  /* ---- Semantic (LIGHT MODE default) ---- */
+  --surface-0: var(--gray-50);      /* page background */
+  --surface-1: var(--gray-0);       /* cards */
+  --surface-2: var(--gray-100);     /* elevated / subtle fills */
+  --surface-3: var(--gray-150);
+  --on-surface: var(--gray-900);
+  --on-surface-secondary: var(--gray-600);
+  --on-surface-muted: var(--gray-500);
+
+  --primary: var(--indigo-600);
+  --primary-strong: var(--indigo-700);
+  --primary-soft: var(--indigo-50);
+  --on-primary: #FFFFFF;
+
+  --accent: var(--cyan-500);
+  --accent-strong: var(--cyan-600);
+  --verified: var(--green-600);
+  --highlight: var(--lime-500);
+
+  --success: var(--green-600);
+  --warning: var(--amber-400);
+  --error: var(--rose-500);
+
+  --border-subtle: rgba(15, 23, 42, 0.07);
+  --border-default: rgba(15, 23, 42, 0.12);
+  --border-strong: rgba(15, 23, 42, 0.20);
+
+  --ring: rgba(99, 102, 241, 0.45);
+
+  /* ---- Gradients ---- */
+  --grad-brand: linear-gradient(135deg, var(--indigo-600) 0%, var(--cyan-500) 100%);
+  --grad-vivid: linear-gradient(120deg, var(--indigo-600) 0%, var(--cyan-500) 55%, var(--lime-500) 110%);
+  --grad-text: linear-gradient(100deg, var(--indigo-600), var(--cyan-500) 60%, var(--lime-500));
+  --grad-glow: radial-gradient(60% 60% at 50% 0%, rgba(99,102,241,0.18), transparent 70%);
+  --grad-mesh:
+    radial-gradient(40% 55% at 15% 10%, rgba(99,102,241,0.18), transparent 60%),
+    radial-gradient(45% 55% at 85% 15%, rgba(6,182,212,0.16), transparent 60%),
+    radial-gradient(40% 50% at 75% 90%, rgba(132,204,22,0.12), transparent 60%);
+
+  /* ---- Typography ---- */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Fluid type scale (clamp: min, vw, max) */
+  --text-xs:   clamp(0.72rem, 0.69rem + 0.15vw, 0.78rem);
+  --text-sm:   clamp(0.82rem, 0.79rem + 0.18vw, 0.9rem);
+  --text-base: clamp(0.95rem, 0.91rem + 0.25vw, 1.05rem);
+  --text-lg:   clamp(1.08rem, 1.0rem + 0.4vw, 1.25rem);
+  --text-xl:   clamp(1.25rem, 1.13rem + 0.6vw, 1.5rem);
+  --text-2xl:  clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --text-3xl:  clamp(1.9rem, 1.5rem + 1.9vw, 2.75rem);
+  --text-4xl:  clamp(2.3rem, 1.7rem + 3vw, 3.75rem);
+  --text-5xl:  clamp(2.8rem, 1.9rem + 4.4vw, 5rem);
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.6;
+  --tracking-tight: -0.02em;
+  --tracking-tighter: -0.035em;
+  --tracking-wide: 0.02em;
+  --tracking-widest: 0.18em;
+
+  /* ---- Spacing (8pt grid) ---- */
+  --space-1: 0.25rem;  --space-2: 0.5rem;  --space-3: 0.75rem; --space-4: 1rem;
+  --space-5: 1.25rem;  --space-6: 1.5rem;  --space-8: 2rem;    --space-10: 2.5rem;
+  --space-12: 3rem;    --space-14: 3.5rem; --space-16: 4rem;   --space-20: 5rem;
+  --space-24: 6rem;    --space-28: 7rem;   --space-32: 8rem;
+
+  --gutter: clamp(1.1rem, 4vw, 3rem);
+  --section-y: clamp(3.5rem, 8vw, 8rem);
+
+  /* ---- Radius ---- */
+  --radius-xs: 6px;  --radius-sm: 10px;  --radius-md: 14px;  --radius-lg: 18px;
+  --radius-xl: 24px; --radius-2xl: 32px; --radius-full: 999px;
+
+  /* ---- Shadows ---- */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.07);
+  --shadow-md: 0 8px 24px -6px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 18px 48px -12px rgba(15, 23, 42, 0.18);
+  --shadow-xl: 0 30px 70px -18px rgba(15, 23, 42, 0.26);
+  --shadow-primary: 0 12px 30px -8px rgba(79, 70, 229, 0.45);
+  --shadow-accent: 0 12px 30px -8px rgba(6, 182, 212, 0.4);
+
+  /* ---- Layout ---- */
+  --container: 1200px;
+  --container-wide: 1380px;
+  --container-narrow: 760px;
+
+  /* ---- Z-index ---- */
+  --z-base: 1; --z-raised: 10; --z-sticky: 100; --z-drawer: 800;
+  --z-overlay: 900; --z-modal: 1000; --z-toast: 1100;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur-mid: 280ms;
+  --dur-slow: 520ms;
+
+  --navbar-h: 72px;
+
+  color-scheme: light;
+}
+
+/* ============================================================
+   DARK MODE — explicit toggle OR system preference
+   ============================================================ */
+:root[data-theme="dark"] {
+  --surface-0: var(--gray-950);
+  --surface-1: #111827;
+  --surface-2: #161F33;
+  --surface-3: #1E2940;
+  --on-surface: #F2F6FC;
+  --on-surface-secondary: #A6B6CF;
+  --on-surface-muted: #7C8BA6;
+
+  --primary: var(--indigo-500);
+  --primary-strong: var(--indigo-400);
+  --primary-soft: rgba(99, 102, 241, 0.14);
+  --accent: var(--cyan-400);
+  --accent-strong: var(--cyan-300);
+  --verified: var(--green-400);
+  --highlight: var(--lime-400);
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --ring: rgba(129, 140, 248, 0.55);
+
+  --grad-glow: radial-gradient(60% 60% at 50% 0%, rgba(99,102,241,0.28), transparent 70%);
+  --grad-mesh:
+    radial-gradient(40% 55% at 15% 10%, rgba(99,102,241,0.26), transparent 60%),
+    radial-gradient(45% 55% at 85% 15%, rgba(34,211,238,0.20), transparent 60%),
+    radial-gradient(40% 50% at 75% 90%, rgba(132,204,22,0.14), transparent 60%);
+
+  --shadow-md: 0 8px 24px -6px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 18px 48px -12px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 30px 70px -18px rgba(0, 0, 0, 0.7);
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface-0: var(--gray-950);
+    --surface-1: #111827;
+    --surface-2: #161F33;
+    --surface-3: #1E2940;
+    --on-surface: #F2F6FC;
+    --on-surface-secondary: #A6B6CF;
+    --on-surface-muted: #7C8BA6;
+    --primary: var(--indigo-500);
+    --primary-strong: var(--indigo-400);
+    --primary-soft: rgba(99, 102, 241, 0.14);
+    --accent: var(--cyan-400);
+    --accent-strong: var(--cyan-300);
+    --verified: var(--green-400);
+    --highlight: var(--lime-400);
+    --border-subtle: rgba(255, 255, 255, 0.07);
+    --border-default: rgba(255, 255, 255, 0.12);
+    --border-strong: rgba(255, 255, 255, 0.22);
+    --ring: rgba(129, 140, 248, 0.55);
+    --grad-glow: radial-gradient(60% 60% at 50% 0%, rgba(99,102,241,0.28), transparent 70%);
+    color-scheme: dark;
+  }
+}
