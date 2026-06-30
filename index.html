@@ -23,7 +23,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -87,7 +88,7 @@
   <!-- TRUST MARQUEE -->
   <div class="section--tight" style="padding-block:1.5rem">
     <div class="container">
-      <p class="text-center text-muted" style="font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.16em;margin-bottom:1rem">Trusted by research teams &amp; core facilities</p>
+      <p class="text-center text-muted" style="font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.16em;margin-bottom:1rem">Built for research teams &amp; core facilities</p>
       <div class="marquee">
         <div class="marquee__track">
           <span class="marquee__item"><i data-icon="microscope"></i> University Labs</span>
@@ -106,7 +107,7 @@
     <div class="container">
       <div class="stats-band card" style="padding:clamp(1.5rem,4vw,2.5rem)" data-reveal-stagger>
         <div class="stat"><div class="stat__num"><span data-count="99">0</span>%+</div><div class="stat__label">Verified purity on every catalog item</div></div>
-        <div class="stat"><div class="stat__num"><span data-count="500">0</span>+</div><div class="stat__label">Research compounds in catalog</div></div>
+        <div class="stat"><div class="stat__num"><span data-count="20">0</span>+</div><div class="stat__label">Research compounds in catalog</div></div>
         <div class="stat"><div class="stat__num"><span data-count="100">0</span>%</div><div class="stat__label">Batches shipped with a COA</div></div>
         <div class="stat"><div class="stat__num"><span data-count="24">0</span>h</div><div class="stat__label">Typical dispatch on in-stock orders</div></div>
       </div>
@@ -190,16 +191,16 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- TRANSPARENCY / COMPLIANCE -->
   <section class="section">
     <div class="container">
-      <div class="section-head" data-reveal="up"><span class="eyebrow">From the bench</span><h2>What researchers say</h2></div>
-      <div class="auto-grid" style="--grid-min:280px" data-reveal-stagger>
-        <figure class="testimonial"><div class="stars">★★★★★</div><blockquote class="testimonial__quote">“The batch COAs match what we see on our own instruments. That consistency is exactly what we need to keep our assays reproducible.”</blockquote><figcaption class="testimonial__author"><span class="avatar">EM</span><span><span class="testimonial__name">Dr. Elena Marsh</span><span class="testimonial__role">Principal Investigator · University Lab</span></span></figcaption></figure>
-        <figure class="testimonial"><div class="stars">★★★★★</div><blockquote class="testimonial__quote">“Cold-chain handling actually held up. Our compounds arrived intact and the documentation was complete and easy to file.”</blockquote><figcaption class="testimonial__author"><span class="avatar">RP</span><span><span class="testimonial__name">Dr. Raj Patel</span><span class="testimonial__role">Lab Manager · Biotech R&amp;D</span></span></figcaption></figure>
-        <figure class="testimonial"><div class="stars">★★★★★</div><blockquote class="testimonial__quote">“Procurement is usually the slow part. PepCare made it painless — clear specs, clean paperwork, and dispatch faster than we expected.”</blockquote><figcaption class="testimonial__author"><span class="avatar">SL</span><span><span class="testimonial__name">Sofia Lindqvist</span><span class="testimonial__role">Procurement · Research Institute</span></span></figcaption></figure>
-        <figure class="testimonial"><div class="stars">★★★★★</div><blockquote class="testimonial__quote">“Having third-party HPLC and MS data up front saved us a round of in-house QC. The transparency builds real trust.”</blockquote><figcaption class="testimonial__author"><span class="avatar">MC</span><span><span class="testimonial__name">Dr. Marcus Cole</span><span class="testimonial__role">Senior Scientist · Core Facility</span></span></figcaption></figure>
+      <div class="section-head" data-reveal="up"><span class="eyebrow">Transparency first</span><h2>Built for clean, compliant procurement</h2><p class="lead">No fine print, no surprises. Every policy and specification is published up front, before you buy.</p></div>
+      <div class="value-grid" data-reveal-stagger>
+        <div class="feature-card"><div class="feature-icon"><i data-icon="file-check"></i></div><h3>Documented business &amp; policies</h3><p>Clear business identity, contact details, and full <a href="terms.html" style="color:var(--primary)">Terms</a>, <a href="privacy.html" style="color:var(--primary)">Privacy</a>, <a href="refund.html" style="color:var(--primary)">Refund</a> &amp; <a href="shipping.html" style="color:var(--primary)">Shipping</a> policies — published, not buried.</p></div>
+        <div class="feature-card"><div class="feature-icon"><i data-icon="lock"></i></div><h3>Secure HTTPS checkout</h3><p>Encrypted, PCI-compliant payments. Complete pricing, availability, and a documented acceptable-use confirmation are shown before any commitment.</p></div>
+        <div class="feature-card"><div class="feature-icon"><i data-icon="shield-check"></i></div><h3>Research Use Only, stated plainly</h3><p>We make no medical, therapeutic, or efficacy claims. Products are sold to qualified researchers and institutions for in-vitro laboratory research only.</p></div>
       </div>
+      <p class="text-center text-muted" style="margin-top:2rem;font-size:var(--text-sm)" data-reveal="fade">Read our full <a href="compliance.html" style="color:var(--primary);font-weight:600">Research Use Only &amp; Acceptable Use policy</a>.</p>
     </div>
   </section>
 

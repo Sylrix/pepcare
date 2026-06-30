@@ -249,25 +249,25 @@
 
 /* ---- Floating blobs ---- */
 .fx-blobs { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
-/* wrapper animates transform only (cheap); inner core holds the cached blur */
+/* soft blobs via radial-gradient (no blur filter — GPU-cheap, fast paint) */
 .fx-blob { position: absolute; will-change: transform; }
-.fx-blob__c { display: block; width: 100%; height: 100%; border-radius: 50%; filter: blur(54px); opacity: 0.42; }
-.fx-blob.b1 { width: 40vw; height: 40vw; left: -8vw; top: -6vw; animation: blob 19s var(--ease-smooth) infinite; }
-.fx-blob.b2 { width: 34vw; height: 34vw; right: -8vw; top: 5vw; animation: blob 23s var(--ease-smooth) infinite reverse; }
-.fx-blob.b3 { width: 32vw; height: 32vw; left: 16vw; bottom: -12vw; animation: blob 21s var(--ease-smooth) infinite; }
-.fx-blob.b4 { width: 26vw; height: 26vw; right: 12vw; bottom: 2vw; animation: blob 27s var(--ease-smooth) infinite reverse; }
-.fx-blob.b1 .fx-blob__c { background: #C9B8FF; }
-.fx-blob.b2 .fx-blob__c { background: #FFC2DE; }
-.fx-blob.b3 .fx-blob__c { background: #B6F5D8; }
-.fx-blob.b4 .fx-blob__c { background: #FFE7A8; }
-:root[data-theme="dark"] .fx-blob__c { opacity: 0.3; }
+.fx-blob__c { display: block; width: 100%; height: 100%; border-radius: 50%; opacity: 0.5; }
+.fx-blob.b1 { width: 44vw; height: 44vw; left: -10vw; top: -8vw; animation: blob 19s var(--ease-smooth) infinite; }
+.fx-blob.b2 { width: 38vw; height: 38vw; right: -10vw; top: 4vw; animation: blob 23s var(--ease-smooth) infinite reverse; }
+.fx-blob.b3 { width: 36vw; height: 36vw; left: 14vw; bottom: -14vw; animation: blob 21s var(--ease-smooth) infinite; }
+.fx-blob.b4 { width: 30vw; height: 30vw; right: 10vw; bottom: 0; animation: blob 27s var(--ease-smooth) infinite reverse; }
+.fx-blob.b1 .fx-blob__c { background: radial-gradient(closest-side, #C9B8FF, transparent 72%); }
+.fx-blob.b2 .fx-blob__c { background: radial-gradient(closest-side, #FFC2DE, transparent 72%); }
+.fx-blob.b3 .fx-blob__c { background: radial-gradient(closest-side, #B6F5D8, transparent 72%); }
+.fx-blob.b4 .fx-blob__c { background: radial-gradient(closest-side, #FFE7A8, transparent 72%); }
+:root[data-theme="dark"] .fx-blob__c { opacity: 0.34; }
 @keyframes blob {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33% { transform: translate(5vw, 4vh) scale(1.1); }
   66% { transform: translate(-4vw, -3vh) scale(0.92); }
 }
 body::before { opacity: 0.55; }
-@media (max-width: 640px) { .fx-blob__c { filter: blur(40px); opacity: 0.4; } .fx-blob.b4 { display: none; } }
+@media (max-width: 640px) { .fx-blob.b4 { display: none; } }
 @media (prefers-reduced-motion: reduce) { .fx-blob { animation: none !important; } }
 .reduce-fx .fx-blob { animation: none !important; }
 

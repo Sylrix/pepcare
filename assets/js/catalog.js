@@ -62,9 +62,6 @@
     </svg>`;
   }
 
-  function ratingHtml(p) {
-    return `<span class="rating">${icon('star', { size: 14, fill: 'currentColor' })} ${(p.rating || 4.8).toFixed(1)} <span class="text-muted">(${p.reviewCount || 0})</span></span>`;
-  }
   function badgeHtml(p) {
     if (!p.badge) return '';
     const cls = /new/i.test(p.badge) ? 'badge-new' : /ref/i.test(p.badge) ? 'badge-accent' : 'badge';
@@ -87,7 +84,6 @@
           <span class="spec-pill">${p.purity}</span>
           <span class="spec-pill">${p.size}</span>
         </div>
-        <div style="margin-top:.35rem">${ratingHtml(p)}</div>
         <div class="product-card__foot">
           <div class="price">${store.money(p.price, p.currency)} <small>/ ${p.size}</small></div>
           <button class="btn btn-primary btn-sm" data-add="${p.id}" aria-label="Add ${p.name} to cart" ${p.inStock ? '' : 'disabled'}>
@@ -108,7 +104,7 @@
     // Featured grid (home)
     const feat = document.getElementById('featured-grid');
     if (feat) {
-      const ranked = products.slice().sort((a, b) => (b.badge ? 1 : 0) - (a.badge ? 1 : 0) || (b.rating - a.rating));
+      const ranked = products.slice().sort((a, b) => (b.priority || 0) - (a.priority || 0) || (b.badge ? 1 : 0) - (a.badge ? 1 : 0) || a.name.localeCompare(b.name));
       feat.innerHTML = ranked.slice(0, 8).map(card).join('');
       reobserve(feat);
     }
@@ -220,7 +216,7 @@
     const specs = [
       ['CAS Number', p.casNumber], ['Molecular Formula', p.molecularFormula], ['Molar Mass', p.molarMass],
       ['Purity', p.purity], ['Physical Form', p.form], ['Pack Size', p.size],
-      ['Sequence', p.sequence], ['Storage', p.storage],
+      ['Sequence', p.sequence], ['Components', (p.components || []).join(' · ')], ['Storage', p.storage],
     ].filter(([, v]) => v);
 
     root.innerHTML = `
@@ -238,7 +234,7 @@
         <div class="product-detail__info" data-reveal="right">
           <span class="product-card__cat">${catName(p.categoryId)}</span>
           <h1>${p.name}</h1>
-          <div class="cluster" style="gap:1rem">${ratingHtml(p)} <span class="ruo-tag">Research Use Only</span></div>
+          <div class="cluster" style="gap:1rem"><span class="ruo-tag">Research Use Only</span> <span class="badge badge-verified">${icon('shield-check', { size: 14 })} HPLC-verified</span></div>
           <p class="lead">${p.shortDescription}</p>
           <div class="product-detail__price"><span class="price" style="font-size:var(--text-3xl)">${store.money(p.price, p.currency)}</span> <span class="text-muted">/ ${p.size}</span></div>
           <div class="stock-dot ${p.inStock ? '' : 'out'}">${p.inStock ? 'In stock — ships within 24h' : 'Currently out of stock'}</div>
@@ -300,7 +296,6 @@
     ld.textContent = JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Product', name: p.name, description: p.shortDescription,
       sku: p.id, category: catName(p.categoryId), brand: { '@type': 'Brand', name: 'PepCare' },
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount },
       offers: { '@type': 'Offer', price: p.price, priceCurrency: p.currency, availability: p.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' },
     });
     document.head.appendChild(ld);

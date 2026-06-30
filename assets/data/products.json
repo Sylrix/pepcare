@@ -39,6 +39,134 @@
   ],
   "products": [
     {
+      "id": "syl-nad",
+      "slug": "nad-100mg",
+      "name": "NAD⁺ (β-Nicotinamide Adenine Dinucleotide)",
+      "categoryId": "biochem-reagents",
+      "shortDescription": "Coenzyme reference reagent for in-vitro redox and enzymatic assays.",
+      "longDescription": "β-Nicotinamide adenine dinucleotide (NAD⁺) is a redox coenzyme used as a substrate and cofactor in in-vitro enzymatic and metabolic assays. Supplied as a high-purity lyophilized powder for laboratory research workflows. For Research Use Only. Not for human or veterinary consumption.",
+      "casNumber": "53-84-9",
+      "molecularFormula": "C21H27N7O14P2",
+      "molarMass": "663.43 g/mol",
+      "purity": "≥98% (HPLC)",
+      "form": "Lyophilized powder",
+      "size": "100 mg",
+      "storage": "-20°C, desiccated, protect from light",
+      "price": 79,
+      "currency": "USD",
+      "inStock": true,
+      "badge": "Best Seller",
+      "priority": 100,
+      "tags": [
+        "coenzyme",
+        "redox",
+        "reagent"
+      ],
+      "researchAreas": [
+        "Redox biochemistry",
+        "Enzyme kinetics",
+        "Cell metabolism (in vitro)"
+      ]
+    },
+    {
+      "id": "syl-ghk-cu",
+      "slug": "ghk-cu-50mg",
+      "name": "GHK-Cu (Copper Tripeptide-1)",
+      "categoryId": "research-peptides",
+      "shortDescription": "Copper-binding tripeptide reference compound for in-vitro research.",
+      "longDescription": "GHK-Cu is the copper(II) complex of the tripeptide glycyl-L-histidyl-L-lysine, used as a reference compound in in-vitro studies of metal-peptide coordination and matrix biology. Supplied as a characterized lyophilized powder for laboratory research. For Research Use Only. Not for human or veterinary consumption.",
+      "casNumber": "89030-95-5",
+      "molecularFormula": "C14H24N6O4·Cu",
+      "molarMass": "~403.9 g/mol (Cu complex)",
+      "purity": "≥98% (HPLC)",
+      "form": "Lyophilized powder",
+      "size": "50 mg",
+      "storage": "-20°C, desiccated, protect from light",
+      "price": 64,
+      "currency": "USD",
+      "sequence": "Gly-His-Lys (Cu²⁺ complex)",
+      "inStock": true,
+      "badge": "New",
+      "priority": 99,
+      "tags": [
+        "tripeptide",
+        "copper-peptide",
+        "GHK"
+      ],
+      "researchAreas": [
+        "Peptide chemistry",
+        "Matrix biology (in vitro)"
+      ]
+    },
+    {
+      "id": "syl-glow",
+      "slug": "glow-research-blend",
+      "name": "GLOW Research Blend",
+      "categoryId": "research-peptides",
+      "shortDescription": "Multi-peptide reference blend (GHK-Cu · BPC-157 · TB-500) for in-vitro research.",
+      "longDescription": "GLOW is a multi-peptide reference blend containing GHK-Cu, BPC-157, and TB-500, supplied as a single characterized lyophilizate for in-vitro laboratory research and analytical method development. Component identities are confirmed by HPLC. This product makes no therapeutic, cosmetic, or efficacy claims. For Research Use Only. Not for human or veterinary consumption.",
+      "purity": "Each component ≥98% (HPLC)",
+      "form": "Lyophilized powder (multi-peptide blend)",
+      "size": "70 mg total",
+      "storage": "-20°C, desiccated, protect from light",
+      "price": 139,
+      "currency": "USD",
+      "inStock": true,
+      "badge": "Best Seller",
+      "priority": 98,
+      "tags": [
+        "peptide-blend",
+        "GHK-Cu",
+        "BPC-157",
+        "TB-500",
+        "reference"
+      ],
+      "researchAreas": [
+        "Peptide research (in vitro)",
+        "Analytical method development"
+      ],
+      "components": [
+        "GHK-Cu",
+        "BPC-157",
+        "TB-500"
+      ]
+    },
+    {
+      "id": "syl-klow",
+      "slug": "klow-research-blend",
+      "name": "KLOW Research Blend",
+      "categoryId": "research-peptides",
+      "shortDescription": "Multi-peptide reference blend (GHK-Cu · BPC-157 · TB-500 · KPV) for in-vitro research.",
+      "longDescription": "KLOW is a multi-peptide reference blend containing GHK-Cu, BPC-157, TB-500, and KPV, supplied as a single characterized lyophilizate for in-vitro laboratory research and analytical reference. Component identities are confirmed by HPLC. This product makes no therapeutic, cosmetic, or efficacy claims. For Research Use Only. Not for human or veterinary consumption.",
+      "purity": "Each component ≥98% (HPLC)",
+      "form": "Lyophilized powder (multi-peptide blend)",
+      "size": "80 mg total",
+      "storage": "-20°C, desiccated, protect from light",
+      "price": 169,
+      "currency": "USD",
+      "inStock": true,
+      "badge": "New",
+      "priority": 97,
+      "tags": [
+        "peptide-blend",
+        "GHK-Cu",
+        "BPC-157",
+        "TB-500",
+        "KPV",
+        "reference"
+      ],
+      "researchAreas": [
+        "Peptide research (in vitro)",
+        "Analytical method development"
+      ],
+      "components": [
+        "GHK-Cu",
+        "BPC-157",
+        "TB-500",
+        "KPV"
+      ]
+    },
+    {
       "id": "syl-glutathione-red",
       "slug": "l-glutathione-reduced-1g",
       "name": "L-Glutathione (Reduced, GSH)",
