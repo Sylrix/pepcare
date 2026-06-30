@@ -92,6 +92,10 @@
         <div>
           ${brand()}
           <p class="footer__about">${FOOT_ABOUT}</p>
+          <address class="footer__about" style="margin-top:1rem;font-style:normal">
+            1309 Coffeen Avenue STE 1200, Sheridan, WY 82801, USA<br>
+            <a href="mailto:support@pepcare.com" style="color:var(--primary)">support@pepcare.com</a> · <a href="tel:+17232666483" style="color:var(--primary)">723-266-6483</a>
+          </address>
           <div class="social" style="margin-top:1.25rem">
             <a href="https://github.com/Sylrix" target="_blank" rel="noopener" aria-label="GitHub">${icon('github', { size: 18 })}</a>
             <a href="#" aria-label="LinkedIn">${icon('linkedin', { size: 18 })}</a>
