@@ -140,8 +140,8 @@
   --container-narrow: 760px;
 
   /* ---- Z-index ---- */
-  --z-base: 1; --z-raised: 10; --z-sticky: 100; --z-drawer: 800;
-  --z-overlay: 900; --z-modal: 1000; --z-toast: 1100;
+  --z-base: 1; --z-raised: 10; --z-sticky: 100; --z-overlay: 800;
+  --z-drawer: 900; --z-modal: 1000; --z-toast: 1100;
 
   /* ---- Motion ---- */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
