@@ -33,7 +33,7 @@
       "inStock": true,
       "badge": "Best Seller",
       "priority": 100,
-      "image": "assets/img/products/nad.png",
+      "image": "assets/img/products/NA.png",
       "tags": [
         "coenzyme",
         "redox",
@@ -65,7 +65,7 @@
       "inStock": true,
       "badge": "New",
       "priority": 99,
-      "image": "assets/img/products/ghk-cu.png",
+      "image": "assets/img/products/GK.png",
       "tags": [
         "tripeptide",
         "copper-peptide",
@@ -92,7 +92,7 @@
       "inStock": true,
       "badge": "Best Seller",
       "priority": 98,
-      "image": "assets/img/products/glow.png",
+      "image": "assets/img/products/GLO.png",
       "tags": [
         "peptide-blend",
         "GHK-Cu",
@@ -125,7 +125,7 @@
       "inStock": true,
       "badge": "New",
       "priority": 97,
-      "image": "assets/img/products/klow.png",
+      "image": "assets/img/products/KLO.png",
       "tags": [
         "peptide-blend",
         "GHK-Cu",
@@ -164,7 +164,7 @@
       "inStock": true,
       "badge": "Popular",
       "priority": 96,
-      "image": "assets/img/products/glutathione.png",
+      "image": "assets/img/products/GLUT.png",
       "tags": [
         "tripeptide",
         "antioxidant-reagent",
