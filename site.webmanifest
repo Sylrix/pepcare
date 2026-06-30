@@ -1,6 +1,6 @@
 {
-  "name": "Sylrix Research",
-  "short_name": "Sylrix",
+  "name": "PepCare",
+  "short_name": "PepCare",
   "description": "High-purity, third-party-verified research compounds. For Research Use Only.",
   "start_url": "./index.html",
   "display": "standalone",

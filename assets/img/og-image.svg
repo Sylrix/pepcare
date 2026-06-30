@@ -17,7 +17,7 @@
     <path d="M30 26c0 12 33 16 33 30a11 11 0 0 1-22 0" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none"/>
     <path d="M62 66c0-12-33-16-33-30a11 11 0 0 1 22 0" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.85"/>
   </g>
-  <text x="210" y="158" font-family="Space Grotesk, Arial, sans-serif" font-size="44" font-weight="700" fill="#fff">Sylrix Research</text>
+  <text x="210" y="158" font-family="Space Grotesk, Arial, sans-serif" font-size="44" font-weight="700" fill="#fff">PepCare</text>
   <text x="90" y="320" font-family="Space Grotesk, Arial, sans-serif" font-size="86" font-weight="700" fill="#fff">Compounds your protocol</text>
   <text x="90" y="418" font-family="Space Grotesk, Arial, sans-serif" font-size="86" font-weight="700" fill="url(#g)">can actually trust.</text>
   <text x="90" y="500" font-family="Inter, Arial, sans-serif" font-size="32" fill="#A6B6CF">HPLC &amp; MS verified · Batch COAs · Cold-chain shipping</text>

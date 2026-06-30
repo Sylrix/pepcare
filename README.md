@@ -1,4 +1,4 @@
-# Sylrix Research — Research-Use-Only storefront
+# PepCare — Research-Use-Only storefront
 
 A fast, animated, fully static storefront for **scientific / Research-Use-Only (RUO)** products
 (research peptides, amino acids, reference standards, biochemical reagents). Built to deploy on
@@ -53,20 +53,20 @@ python -m http.server 8080
 
 Then open the printed URL.
 
-## 🌐 Deploy to GitHub Pages (account: Sylrix)
+## 🌐 Deploy to GitHub Pages (account: PepCare)
 
 ```bash
 git init
 git add -A
-git commit -m "feat: Sylrix Research RUO storefront"
-gh repo create Sylrix/sylrix-research --public --source=. --remote=origin --push
-gh api -X POST repos/Sylrix/sylrix-research/pages -f build_type=legacy -f 'source[branch]=main' -f 'source[path]=/'
+git commit -m "feat: PepCare RUO storefront"
+gh repo create Sylrix/pepcare --public --source=. --remote=origin --push
+gh api -X POST repos/Sylrix/pepcare/pages -f build_type=legacy -f 'source[branch]=main' -f 'source[path]=/'
 ```
 
-Your site goes live at **https://sylrix.github.io/sylrix-research/** (first build takes ~1 min).
+Your site goes live at **https://sylrix.github.io/pepcare/** (first build takes ~1 min).
 
 > If you use a different repo name or a custom domain, do a find-and-replace of
-> `https://sylrix.github.io/sylrix-research/` across the `.html` files (canonical/OG tags) and
+> `https://sylrix.github.io/pepcare/` across the `.html` files (canonical/OG tags) and
 > `sitemap.xml` / `robots.txt`. For a custom domain, add a `CNAME` file containing the domain.
 
 ## 🛠 Customize
@@ -79,7 +79,7 @@ Your site goes live at **https://sylrix.github.io/sylrix-research/** (first buil
 | Colors / fonts / spacing | `assets/css/tokens.css` |
 | Logo | `assets/img/favicon.svg` + the inline `brandMark` in `assets/js/layout.js` |
 
-Rebrand from "Sylrix Research" by replacing the name in `assets/js/layout.js`, `index.html`,
+Rebrand from "PepCare" by replacing the name in `assets/js/layout.js`, `index.html`,
 `about.html`, and `assets/data/*.json`.
 
 ## 💳 Going live with payments

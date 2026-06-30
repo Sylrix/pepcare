@@ -19,23 +19,23 @@
   const isActive = (k) => (k === page || (k === 'catalog' && page === 'product')) ? 'aria-current="page"' : '';
 
   const RUO_NOTE = 'For Research Use Only — Not for human or veterinary consumption. Sold to qualified researchers & institutions only.';
-  const FOOT_ABOUT = 'Sylrix Research provides high-purity, third-party-verified research compounds with batch-specific Certificates of Analysis, sold to qualified researchers and institutions for laboratory use only.';
+  const FOOT_ABOUT = 'PepCare provides high-purity, third-party-verified research compounds with batch-specific Certificates of Analysis, sold to qualified researchers and institutions for laboratory use only.';
   const FOOT_LEGAL = 'All products are for Research Use Only (RUO). Not for human or veterinary consumption, and not for clinical, diagnostic, or therapeutic use.';
 
   const brandMark = `
     <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
       <defs>
         <linearGradient id="bm" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#4F46E5"/><stop offset="1" stop-color="#06B6D4"/>
+          <stop stop-color="#7C3AED"/><stop offset="1" stop-color="#FF4D9D"/>
         </linearGradient>
       </defs>
       <rect x="1.5" y="1.5" width="37" height="37" rx="11" fill="url(#bm)"/>
       <path d="M13 11c0 5 14 7 14 13a4.5 4.5 0 0 1-9 0" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
       <path d="M27 29c0-5-14-7-14-13a4.5 4.5 0 0 1 9 0" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
-      <circle cx="13" cy="11" r="2.4" fill="#A3E635"/>
+      <circle cx="13" cy="11" r="2.4" fill="#2FE3B3"/>
       <circle cx="27" cy="29" r="2.4" fill="#fff"/>
     </svg>`;
-  const brand = (cls = '') => `<a class="brand ${cls}" href="index.html" aria-label="Sylrix Research home">${brandMark}<span class="brand__name">Sylrix<b>Research</b></span></a>`;
+  const brand = (cls = '') => `<a class="brand ${cls}" href="index.html" aria-label="PepCare home">${brandMark}<span class="brand__name">Pep<b>Care</b></span></a>`;
 
   // ---------- Build chrome ----------
   const top = document.createElement('div');
@@ -75,6 +75,13 @@
       </nav>
     </div>`;
   document.body.prepend(top);
+
+  // ---------- Floating gradient blobs (Gen-Z background) ----------
+  const blobs = document.createElement('div');
+  blobs.className = 'fx-blobs';
+  blobs.setAttribute('aria-hidden', 'true');
+  blobs.innerHTML = '<span class="fx-blob b1"><i class="fx-blob__c"></i></span><span class="fx-blob b2"><i class="fx-blob__c"></i></span><span class="fx-blob b3"><i class="fx-blob__c"></i></span><span class="fx-blob b4"><i class="fx-blob__c"></i></span>';
+  document.body.prepend(blobs);
 
   // ---------- Footer ----------
   const footer = document.createElement('footer');
@@ -120,7 +127,7 @@
         <strong>⚗ Compliance notice:</strong> ${FOOT_LEGAL} Buyers certify legitimate research use and are responsible for compliance with applicable laws.
       </p>
       <div class="footer__bottom">
-        <span>© <span data-year></span> Sylrix Research. All rights reserved.</span>
+        <span>© <span data-year></span> PepCare. All rights reserved.</span>
         <span>Built for laboratory research · Demo storefront</span>
       </div>
     </div>`;
@@ -162,8 +169,7 @@
   const root = document.documentElement;
   const themeBtn = document.getElementById('theme-toggle');
   function currentTheme() {
-    return root.getAttribute('data-theme') ||
-      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    return root.getAttribute('data-theme') || 'light';
   }
   function paintThemeBtn() {
     themeBtn.innerHTML = icon(currentTheme() === 'dark' ? 'sun' : 'moon', { size: 21 });

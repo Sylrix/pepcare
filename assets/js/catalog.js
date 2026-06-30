@@ -193,8 +193,8 @@
     const root = document.getElementById('product-root');
     if (!p) { root.innerHTML = `<div class="empty-state"><h2>Product not found</h2><p class="text-muted">This compound may have been moved.</p><a class="btn btn-primary" href="products.html">Back to catalog</a></div>`; return; }
 
-    document.title = `${p.name} — Sylrix Research`;
-    const BASE = 'https://sylrix.github.io/sylrix-research/';
+    document.title = `${p.name} — PepCare`;
+    const BASE = 'https://sylrix.github.io/pepcare/';
     const pageUrl = BASE + 'product.html?slug=' + p.slug;
     const upsertMeta = (sel, val) => {
       let el = document.head.querySelector(sel);
@@ -206,7 +206,7 @@
       }
       el.setAttribute('content', val);
     };
-    const titleTag = `${p.name} — Sylrix Research`;
+    const titleTag = `${p.name} — PepCare`;
     upsertMeta('meta[name="description"]', p.shortDescription);
     upsertMeta('meta[property="og:title"]', titleTag);
     upsertMeta('meta[property="og:description"]', p.shortDescription);
@@ -299,7 +299,7 @@
     const ld = document.createElement('script'); ld.type = 'application/ld+json';
     ld.textContent = JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Product', name: p.name, description: p.shortDescription,
-      sku: p.id, category: catName(p.categoryId), brand: { '@type': 'Brand', name: 'Sylrix Research' },
+      sku: p.id, category: catName(p.categoryId), brand: { '@type': 'Brand', name: 'PepCare' },
       aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount },
       offers: { '@type': 'Offer', price: p.price, priceCurrency: p.currency, availability: p.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' },
     });

@@ -1,8 +1,8 @@
 {
   "brand": {
-    "name": "Sylrix Research",
+    "name": "PepCare",
     "tagline": "Research-grade compounds. Verified purity. Strictly for the lab.",
-    "shortPitch": "Sylrix Research supplies qualified scientists and institutions with high-purity, third-party-verified research compounds, each backed by a batch-specific Certificate of Analysis and shipped for laboratory use only."
+    "shortPitch": "PepCare supplies qualified scientists and institutions with high-purity, third-party-verified research compounds, each backed by a batch-specific Certificate of Analysis and shipped for laboratory use only."
   },
   "hero": {
     "eyebrow": "Research Use Only - Not for human or veterinary use",
@@ -122,7 +122,7 @@
       "rating": 5
     },
     {
-      "quote": "Procurement is usually the slow part. Sylrix made it painless - clear specs, clean paperwork, and dispatch faster than we expected.",
+      "quote": "Procurement is usually the slow part. PepCare made it painless - clear specs, clean paperwork, and dispatch faster than we expected.",
       "author": "Sofia Lindqvist",
       "role": "Procurement Specialist",
       "org": "Research Institute",
@@ -139,7 +139,7 @@
   "faq": [
     {
       "q": "What does Research Use Only (RUO) mean?",
-      "a": "All Sylrix Research products are intended exclusively for in-vitro laboratory research. They are not drugs, supplements, or medical devices, and are not for human or veterinary consumption, clinical, diagnostic, or therapeutic use."
+      "a": "All PepCare products are intended exclusively for in-vitro laboratory research. They are not drugs, supplements, or medical devices, and are not for human or veterinary consumption, clinical, diagnostic, or therapeutic use."
     },
     {
       "q": "Do your products come with a Certificate of Analysis?",
@@ -176,9 +176,9 @@
   ],
   "about": {
     "mission": "To give researchers a supply chain they never have to second-guess - high-purity compounds, verified by independent labs, documented to the batch, and delivered for research use only.",
-    "story": "Sylrix Research was founded by scientists who were tired of inconsistent materials and missing paperwork derailing good experiments. We built the supplier we always wanted: rigorous third-party testing, transparent batch-level documentation, and logistics that respect the chemistry. Today we serve academic labs, core facilities, and biotech teams who measure us by the reproducibility of their results.",
+    "story": "PepCare was founded by scientists who were tired of inconsistent materials and missing paperwork derailing good experiments. We built the supplier we always wanted: rigorous third-party testing, transparent batch-level documentation, and logistics that respect the chemistry. Today we serve academic labs, core facilities, and biotech teams who measure us by the reproducibility of their results.",
     "qualityCommitment": "Every batch is tested by accredited third-party laboratories using HPLC and mass spectrometry, released only when it meets specification, and shipped with a lot-specific Certificate of Analysis. If material does not meet our standard, it does not ship.",
-    "complianceNote": "Sylrix Research products are sold strictly for Research Use Only. They are not for human or veterinary consumption and make no medical, therapeutic, or diagnostic claims. Products are sold only to qualified researchers and institutions for legitimate laboratory research, and buyers are responsible for handling, storage, and use in accordance with applicable laws and institutional policies.",
+    "complianceNote": "PepCare products are sold strictly for Research Use Only. They are not for human or veterinary consumption and make no medical, therapeutic, or diagnostic claims. Products are sold only to qualified researchers and institutions for legitimate laboratory research, and buyers are responsible for handling, storage, and use in accordance with applicable laws and institutional policies.",
     "values": [
       {
         "title": "Verifiable over verbal",
@@ -200,14 +200,14 @@
     "button": "Browse Catalog"
   },
   "contact": {
-    "email": "hello@sylrixresearch.com",
+    "email": "hello@pepcare.com",
     "phone": "+1 (000) 000-0000",
     "address": "1 Research Parkway, Suite 100, Science Park, ST 00000",
     "hours": "Monday to Friday, 9:00 AM - 6:00 PM (local time)",
     "supportNote": "Questions about COAs, storage, or bulk quotes? Our scientific support team is happy to help qualified researchers and institutions."
   },
   "footer": {
-    "about": "Sylrix Research provides high-purity, third-party-verified research compounds with batch-specific Certificates of Analysis, sold to qualified researchers and institutions for laboratory use only.",
+    "about": "PepCare provides high-purity, third-party-verified research compounds with batch-specific Certificates of Analysis, sold to qualified researchers and institutions for laboratory use only.",
     "legalNote": "All products are for Research Use Only (RUO). Not for human or veterinary consumption, and not for clinical, diagnostic, or therapeutic use. Sold exclusively to qualified researchers and institutions. No medical or therapeutic claims are made."
   }
 }
