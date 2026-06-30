@@ -30,9 +30,10 @@
   box-shadow: var(--shadow-lg); font-size: var(--text-sm); font-weight: 600;
 }
 .orbit-chip svg { width: 18px; height: 18px; }
-.orbit-chip.c1 { top: 6%; left: -4%; color: var(--verified); }
-.orbit-chip.c2 { bottom: 14%; right: -6%; color: var(--primary); }
-.orbit-chip.c3 { bottom: -2%; left: 12%; color: var(--accent-strong); }
+.orbit-chip { z-index: 4; }
+.orbit-chip.c1 { top: 3%; left: 0; color: var(--verified); }
+.orbit-chip.c2 { top: 40%; right: 0; bottom: auto; color: var(--primary); }
+.orbit-chip.c3 { bottom: 5%; left: 12%; color: var(--accent-strong); }
 @media (max-width: 520px) { .orbit-chip { font-size: var(--text-xs); padding: 8px 11px; } .orbit-chip.c1 { left: 0; } .orbit-chip.c2 { right: 0; } }
 
 .lab-scene { position: relative; width: min(100%, 400px); margin-inline: auto; }
