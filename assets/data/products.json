@@ -3,44 +3,20 @@
     {
       "id": "research-peptides",
       "name": "Research Peptides",
-      "description": "Synthetic peptides for in-vitro biochemical, receptor-binding, and cell-signaling research applications. For laboratory research use only.",
+      "description": "Synthetic peptides and peptide blends for in-vitro biochemical research. For laboratory research use only.",
       "icon": "peptide"
-    },
-    {
-      "id": "amino-acids",
-      "name": "Amino Acids & Derivatives",
-      "description": "Free amino acids, N-protected building blocks, and derivatives for peptide synthesis and metabolic studies in controlled laboratory settings.",
-      "icon": "amino-acid"
-    },
-    {
-      "id": "reference-standards",
-      "name": "Reference Standards",
-      "description": "Characterized analytical reference materials and certified standards for HPLC, LC-MS, and assay calibration in research laboratories.",
-      "icon": "reference"
     },
     {
       "id": "biochem-reagents",
       "name": "Biochemical Reagents",
-      "description": "Buffers, cofactors, and small-molecule reagents supporting in-vitro enzymatic, cell-culture, and assay workflows.",
+      "description": "Coenzymes and small-molecule reagents supporting in-vitro enzymatic and metabolic research.",
       "icon": "reagent"
-    },
-    {
-      "id": "assay-kits",
-      "name": "Assay Kits & Consumables",
-      "description": "Pre-configured kits and consumables for quantification, ELISA, and reconstitution workflows in research laboratories.",
-      "icon": "kit"
-    },
-    {
-      "id": "lab-accessories",
-      "name": "Lab Accessories",
-      "description": "Reconstitution solvents, vials, and ancillary supplies supporting the handling and storage of research reference materials.",
-      "icon": "accessory"
     }
   ],
   "products": [
     {
       "id": "syl-nad",
-      "slug": "nad-100mg",
+      "slug": "nad",
       "name": "NAD⁺ (β-Nicotinamide Adenine Dinucleotide)",
       "categoryId": "biochem-reagents",
       "shortDescription": "Coenzyme reference reagent for in-vitro redox and enzymatic assays.",
@@ -70,7 +46,7 @@
     },
     {
       "id": "syl-ghk-cu",
-      "slug": "ghk-cu-50mg",
+      "slug": "ghk-cu",
       "name": "GHK-Cu (Copper Tripeptide-1)",
       "categoryId": "research-peptides",
       "shortDescription": "Copper-binding tripeptide reference compound for in-vitro research.",
@@ -100,14 +76,14 @@
     },
     {
       "id": "syl-glow",
-      "slug": "glow-research-blend",
+      "slug": "glow",
       "name": "GLOW Research Blend",
       "categoryId": "research-peptides",
       "shortDescription": "Multi-peptide reference blend (GHK-Cu · BPC-157 · TB-500) for in-vitro research.",
       "longDescription": "GLOW is a multi-peptide reference blend containing GHK-Cu, BPC-157, and TB-500, supplied as a single characterized lyophilizate for in-vitro laboratory research and analytical method development. Component identities are confirmed by HPLC. This product makes no therapeutic, cosmetic, or efficacy claims. For Research Use Only. Not for human or veterinary consumption.",
       "purity": "Each component ≥98% (HPLC)",
       "form": "Lyophilized powder (multi-peptide blend)",
-      "size": "70 mg total",
+      "size": "70 mg",
       "storage": "-20°C, desiccated, protect from light",
       "price": 139,
       "currency": "USD",
@@ -118,8 +94,7 @@
         "peptide-blend",
         "GHK-Cu",
         "BPC-157",
-        "TB-500",
-        "reference"
+        "TB-500"
       ],
       "researchAreas": [
         "Peptide research (in vitro)",
@@ -133,14 +108,14 @@
     },
     {
       "id": "syl-klow",
-      "slug": "klow-research-blend",
+      "slug": "klow",
       "name": "KLOW Research Blend",
       "categoryId": "research-peptides",
       "shortDescription": "Multi-peptide reference blend (GHK-Cu · BPC-157 · TB-500 · KPV) for in-vitro research.",
       "longDescription": "KLOW is a multi-peptide reference blend containing GHK-Cu, BPC-157, TB-500, and KPV, supplied as a single characterized lyophilizate for in-vitro laboratory research and analytical reference. Component identities are confirmed by HPLC. This product makes no therapeutic, cosmetic, or efficacy claims. For Research Use Only. Not for human or veterinary consumption.",
       "purity": "Each component ≥98% (HPLC)",
       "form": "Lyophilized powder (multi-peptide blend)",
-      "size": "80 mg total",
+      "size": "80 mg",
       "storage": "-20°C, desiccated, protect from light",
       "price": 169,
       "currency": "USD",
@@ -152,8 +127,7 @@
         "GHK-Cu",
         "BPC-157",
         "TB-500",
-        "KPV",
-        "reference"
+        "KPV"
       ],
       "researchAreas": [
         "Peptide research (in vitro)",
@@ -167,12 +141,12 @@
       ]
     },
     {
-      "id": "syl-glutathione-red",
-      "slug": "l-glutathione-reduced-1g",
+      "id": "syl-glutathione",
+      "slug": "glutathione",
       "name": "L-Glutathione (Reduced, GSH)",
       "categoryId": "biochem-reagents",
-      "shortDescription": "Reduced glutathione tripeptide reference reagent for in-vitro redox and enzymatic assays.",
-      "longDescription": "L-Glutathione (reduced) is a thiol-containing tripeptide widely used as a substrate and antioxidant cofactor in in-vitro biochemical assays. Supplied as a high-purity lyophilized powder for laboratory research workflows including enzyme kinetics and redox-state studies. For Research Use Only. Not for human consumption.",
+      "shortDescription": "Reduced glutathione tripeptide reference reagent for in-vitro redox assays.",
+      "longDescription": "L-Glutathione (reduced) is a thiol-containing tripeptide used as a substrate and antioxidant cofactor in in-vitro biochemical assays. Supplied as a high-purity lyophilized powder for laboratory research including enzyme kinetics and redox-state studies. For Research Use Only. Not for human or veterinary consumption.",
       "casNumber": "70-18-8",
       "molecularFormula": "C10H17N3O6S",
       "molarMass": "307.32 g/mol",
@@ -182,9 +156,10 @@
       "storage": "-20°C, desiccated, protect from light",
       "price": 42,
       "currency": "USD",
-      "inStock": true,
-      "badge": "Best Seller",
       "sequence": "γ-Glu-Cys-Gly",
+      "inStock": true,
+      "badge": "Popular",
+      "priority": 96,
       "tags": [
         "tripeptide",
         "antioxidant-reagent",
@@ -193,453 +168,8 @@
       ],
       "researchAreas": [
         "Redox biochemistry",
-        "Enzyme kinetics",
-        "Cell biology"
-      ],
-      "rating": 4.9,
-      "reviewCount": 312
-    },
-    {
-      "id": "syl-carnosine",
-      "slug": "l-carnosine-5g",
-      "name": "L-Carnosine",
-      "categoryId": "research-peptides",
-      "shortDescription": "Dipeptide reference compound for in-vitro buffering and metal-chelation studies.",
-      "longDescription": "L-Carnosine is a naturally occurring beta-alanyl-L-histidine dipeptide used in in-vitro investigations of pH buffering, metal-ion chelation, and carbonyl-scavenging chemistry. Provided as a characterized powder suitable for assay development and biochemical screening. For Research Use Only. Not for human consumption.",
-      "casNumber": "305-84-0",
-      "molecularFormula": "C9H14N4O3",
-      "molarMass": "226.23 g/mol",
-      "purity": "≥99% (HPLC)",
-      "form": "Crystalline powder",
-      "size": "5 g",
-      "storage": "-20°C, desiccated",
-      "price": 58,
-      "currency": "USD",
-      "sequence": "β-Ala-His",
-      "tags": [
-        "dipeptide",
-        "histidine",
-        "chelation"
-      ],
-      "researchAreas": [
-        "Biochemistry",
-        "Oxidative-stress research"
-      ],
-      "rating": 4.7,
-      "reviewCount": 144,
-      "inStock": true
-    },
-    {
-      "id": "syl-glycyl-glutamine",
-      "slug": "glycyl-l-glutamine-dipeptide-1g",
-      "name": "Glycyl-L-Glutamine",
-      "categoryId": "research-peptides",
-      "shortDescription": "Stable glutamine-source dipeptide for in-vitro cell-culture media research.",
-      "longDescription": "Glycyl-L-glutamine is a hydrolytically stable dipeptide used as a glutamine source in in-vitro cell-culture media formulation studies. Its enhanced stability relative to free glutamine makes it useful for media-optimization and metabolic-flux research. For Research Use Only. Not for human consumption.",
-      "casNumber": "13115-71-4",
-      "molecularFormula": "C7H13N3O4",
-      "molarMass": "203.20 g/mol",
-      "purity": "≥98% (HPLC)",
-      "form": "Lyophilized powder",
-      "size": "1 g",
-      "storage": "-20°C, desiccated",
-      "price": 64,
-      "currency": "USD",
-      "sequence": "Gly-Gln",
-      "tags": [
-        "dipeptide",
-        "cell-culture",
-        "glutamine"
-      ],
-      "researchAreas": [
-        "Cell-culture research",
-        "Metabolism"
-      ],
-      "rating": 4.6,
-      "reviewCount": 87,
-      "inStock": true
-    },
-    {
-      "id": "syl-glutathione-ref",
-      "slug": "glutathione-reference-standard-100mg",
-      "name": "Glutathione Reference Standard",
-      "categoryId": "reference-standards",
-      "shortDescription": "Characterized GSH analytical standard for HPLC and LC-MS calibration.",
-      "longDescription": "This glutathione reference standard is a tightly characterized material intended for calibration of HPLC and LC-MS methods quantifying glutathione in research samples. Each lot is accompanied by certificate-grade purity data for traceable analytical workflows. For Research Use Only. Not for human consumption.",
-      "casNumber": "70-18-8",
-      "molecularFormula": "C10H17N3O6S",
-      "molarMass": "307.32 g/mol",
-      "purity": "≥99.5% (HPLC, qNMR-verified)",
-      "form": "Lyophilized powder",
-      "size": "100 mg",
-      "storage": "-20°C, desiccated, protect from light",
-      "price": 119,
-      "currency": "USD",
-      "badge": "Reference Std",
-      "sequence": "γ-Glu-Cys-Gly",
-      "tags": [
-        "reference-standard",
-        "analytical",
-        "tripeptide"
-      ],
-      "researchAreas": [
-        "Analytical chemistry",
-        "Method validation"
-      ],
-      "rating": 4.9,
-      "reviewCount": 56,
-      "inStock": true
-    },
-    {
-      "id": "syl-fmoc-gly",
-      "slug": "fmoc-glycine-25g",
-      "name": "Fmoc-Glycine",
-      "categoryId": "amino-acids",
-      "shortDescription": "Fmoc-protected glycine building block for solid-phase peptide synthesis.",
-      "longDescription": "Fmoc-Glycine is an N-(9-fluorenylmethoxycarbonyl)-protected amino acid used as a building block in Fmoc-based solid-phase peptide synthesis. Supplied at high purity with low free-amine content for reliable coupling in research synthesis. For Research Use Only. Not for human consumption.",
-      "casNumber": "29022-11-5",
-      "molecularFormula": "C17H15NO4",
-      "molarMass": "297.31 g/mol",
-      "purity": "≥99% (HPLC)",
-      "form": "Crystalline powder",
-      "size": "25 g",
-      "storage": "2-8°C, desiccated",
-      "price": 48,
-      "currency": "USD",
-      "tags": [
-        "fmoc",
-        "spps",
-        "building-block"
-      ],
-      "researchAreas": [
-        "Peptide synthesis",
-        "Organic chemistry"
-      ],
-      "rating": 4.8,
-      "reviewCount": 73,
-      "inStock": true
-    },
-    {
-      "id": "syl-fmoc-lys-boc",
-      "slug": "fmoc-lys-boc-oh-25g",
-      "name": "Fmoc-Lys(Boc)-OH",
-      "categoryId": "amino-acids",
-      "shortDescription": "Orthogonally protected lysine derivative for solid-phase peptide synthesis.",
-      "longDescription": "Fmoc-Lys(Boc)-OH is an orthogonally protected lysine derivative with an Fmoc alpha-amino group and a Boc side-chain protecting group for Fmoc SPPS. The dual protection enables selective deprotection strategies in multi-step research synthesis. For Research Use Only. Not for human consumption.",
-      "casNumber": "71989-26-9",
-      "molecularFormula": "C26H32N2O6",
-      "molarMass": "468.55 g/mol",
-      "purity": "≥99% (HPLC)",
-      "form": "Crystalline powder",
-      "size": "25 g",
-      "storage": "2-8°C, desiccated",
-      "price": 76,
-      "currency": "USD",
-      "badge": "Popular",
-      "tags": [
-        "fmoc",
-        "boc",
-        "lysine",
-        "spps"
-      ],
-      "researchAreas": [
-        "Peptide synthesis",
-        "Organic chemistry"
-      ],
-      "rating": 4.8,
-      "reviewCount": 91,
-      "inStock": true
-    },
-    {
-      "id": "syl-l-citrulline",
-      "slug": "l-citrulline-25g",
-      "name": "L-Citrulline",
-      "categoryId": "amino-acids",
-      "shortDescription": "Non-protein amino acid reagent for in-vitro nitrogen-metabolism studies.",
-      "longDescription": "L-Citrulline is a non-proteinogenic amino acid used in in-vitro studies of the urea cycle and nitric-oxide pathway biochemistry. Supplied as a high-purity reagent for enzymatic assays and analytical method development. For Research Use Only. Not for human consumption.",
-      "casNumber": "372-75-8",
-      "molecularFormula": "C6H13N3O3",
-      "molarMass": "175.19 g/mol",
-      "purity": "≥99% (HPLC)",
-      "form": "Crystalline powder",
-      "size": "25 g",
-      "storage": "Room temperature, desiccated",
-      "price": 39,
-      "currency": "USD",
-      "tags": [
-        "amino-acid",
-        "urea-cycle",
-        "non-protein"
-      ],
-      "researchAreas": [
-        "Metabolism",
-        "Enzymology"
-      ],
-      "rating": 4.7,
-      "reviewCount": 118,
-      "inStock": true
-    },
-    {
-      "id": "syl-l-theanine",
-      "slug": "l-theanine-reference-1g",
-      "name": "L-Theanine",
-      "categoryId": "reference-standards",
-      "shortDescription": "Amino-acid analog reference standard for chromatographic identity testing.",
-      "longDescription": "L-Theanine is a glutamine-related amino acid analog supplied as a reference material for chromatographic identity and purity testing in research laboratories. Each lot is characterized for use in analytical method development. For Research Use Only. Not for human consumption.",
-      "casNumber": "3081-61-6",
-      "molecularFormula": "C7H14N2O3",
-      "molarMass": "174.20 g/mol",
-      "purity": "≥99% (HPLC)",
-      "form": "Crystalline powder",
-      "size": "1 g",
-      "storage": "-20°C, desiccated",
-      "price": 54,
-      "currency": "USD",
-      "badge": "Reference Std",
-      "tags": [
-        "reference-standard",
-        "amino-acid",
-        "analytical"
-      ],
-      "researchAreas": [
-        "Analytical chemistry",
-        "Method validation"
-      ],
-      "rating": 4.6,
-      "reviewCount": 64,
-      "inStock": true
-    },
-    {
-      "id": "syl-leu-enkephalin",
-      "slug": "leucine-enkephalin-5mg",
-      "name": "[Leu]-Enkephalin Acetate",
-      "categoryId": "research-peptides",
-      "shortDescription": "Endogenous opioid pentapeptide for in-vitro receptor-binding research.",
-      "longDescription": "[Leu]-Enkephalin is an endogenous pentapeptide used as a research tool in in-vitro opioid-receptor binding and peptidase-activity studies. Supplied as the acetate salt at high purity for reproducible biochemical assays. For Research Use Only. Not for human consumption.",
-      "casNumber": "58822-25-6",
-      "molecularFormula": "C28H37N5O7",
-      "molarMass": "555.62 g/mol",
-      "purity": "≥98% (HPLC)",
-      "form": "Lyophilized powder",
-      "size": "5 mg",
-      "storage": "-20°C, desiccated, protect from light",
-      "price": 96,
-      "currency": "USD",
-      "sequence": "Tyr-Gly-Gly-Phe-Leu",
-      "tags": [
-        "pentapeptide",
-        "neuropeptide",
-        "receptor-binding"
-      ],
-      "researchAreas": [
-        "Neuroscience",
-        "Receptor pharmacology (in vitro)"
-      ],
-      "rating": 4.8,
-      "reviewCount": 47,
-      "inStock": true
-    },
-    {
-      "id": "syl-met-enkephalin",
-      "slug": "methionine-enkephalin-5mg",
-      "name": "[Met]-Enkephalin Acetate",
-      "categoryId": "research-peptides",
-      "shortDescription": "Endogenous opioid pentapeptide for in-vitro biochemical assays.",
-      "longDescription": "[Met]-Enkephalin is an endogenous opioid pentapeptide used in in-vitro receptor-binding and enzymatic-degradation research. Provided as the acetate salt with HPLC-verified purity for laboratory assay development. For Research Use Only. Not for human consumption.",
-      "casNumber": "58569-55-4",
-      "molecularFormula": "C27H35N5O7S",
-      "molarMass": "573.66 g/mol",
-      "purity": "≥98% (HPLC)",
-      "form": "Lyophilized powder",
-      "size": "5 mg",
-      "storage": "-20°C, desiccated, protect from light",
-      "price": 98,
-      "currency": "USD",
-      "sequence": "Tyr-Gly-Gly-Phe-Met",
-      "tags": [
-        "pentapeptide",
-        "neuropeptide",
-        "receptor-binding"
-      ],
-      "researchAreas": [
-        "Neuroscience",
-        "Receptor pharmacology (in vitro)"
-      ],
-      "rating": 4.7,
-      "reviewCount": 41,
-      "inStock": true
-    },
-    {
-      "id": "syl-bradykinin",
-      "slug": "bradykinin-acetate-5mg",
-      "name": "Bradykinin Acetate",
-      "categoryId": "research-peptides",
-      "shortDescription": "Nonapeptide standard for in-vitro receptor and protease research.",
-      "longDescription": "Bradykinin is a nonapeptide used as a research tool in in-vitro studies of kinin-receptor signaling and protease specificity. Supplied as the acetate salt at high purity for reproducible binding and enzymatic assays. For Research Use Only. Not for human consumption.",
-      "casNumber": "5979-11-3",
-      "molecularFormula": "C50H73N15O11",
-      "molarMass": "1060.21 g/mol",
-      "purity": "≥97% (HPLC)",
-      "form": "Lyophilized powder",
-      "size": "5 mg",
-      "storage": "-20°C, desiccated, protect from light",
-      "price": 88,
-      "currency": "USD",
-      "sequence": "Arg-Pro-Pro-Gly-Phe-Ser-Pro-Phe-Arg",
-      "tags": [
-        "nonapeptide",
-        "kinin",
-        "receptor-binding"
-      ],
-      "researchAreas": [
-        "Vascular biology (in vitro)",
-        "Protease research"
-      ],
-      "rating": 4.7,
-      "reviewCount": 38,
-      "inStock": true
-    },
-    {
-      "id": "syl-glp1-frag",
-      "slug": "glp-1-fragment-reference-1mg",
-      "name": "GLP-1 (7-36) Amide Reference Peptide",
-      "categoryId": "reference-standards",
-      "shortDescription": "Incretin peptide reference material for in-vitro analytical characterization.",
-      "longDescription": "This GLP-1 (7-36) amide reference peptide is supplied as a characterized material for in-vitro analytical method development and LC-MS identity confirmation. Intended strictly for laboratory reference and assay-calibration workflows. For Research Use Only. Not for human consumption.",
-      "purity": "≥95% (HPLC)",
-      "form": "Lyophilized powder",
-      "size": "1 mg",
-      "storage": "-20°C, desiccated, protect from light",
-      "price": 165,
-      "currency": "USD",
-      "badge": "New",
-      "sequence": "His-Ala-Glu-Gly-Thr-Phe-Thr-Ser-Asp-Val-Ser-Ser-Tyr-Leu-Glu-Gly-Gln-Ala-Ala-Lys-Glu-Phe-Ile-Ala-Trp-Leu-Val-Lys-Gly-Arg-NH2",
-      "tags": [
-        "reference-standard",
-        "incretin",
-        "analytical"
-      ],
-      "researchAreas": [
-        "Analytical chemistry",
-        "Metabolic research (in vitro)"
-      ],
-      "rating": 4.6,
-      "reviewCount": 29,
-      "inStock": true
-    },
-    {
-      "id": "syl-tris-buffer",
-      "slug": "tris-base-ultrapure-500g",
-      "name": "Tris Base (Ultrapure)",
-      "categoryId": "biochem-reagents",
-      "shortDescription": "Ultrapure Tris buffering reagent for molecular biology workflows.",
-      "longDescription": "Tris base is an ultrapure buffering reagent widely used to prepare buffers for electrophoresis, chromatography, and molecular biology research. Manufactured to low-metal, nuclease-free specifications for sensitive laboratory applications. For Research Use Only. Not for human consumption.",
-      "casNumber": "77-86-1",
-      "molecularFormula": "C4H11NO3",
-      "molarMass": "121.14 g/mol",
-      "purity": "≥99.9%",
-      "form": "Crystalline powder",
-      "size": "500 g",
-      "storage": "Room temperature, keep tightly closed",
-      "price": 52,
-      "currency": "USD",
-      "badge": "Best Seller",
-      "tags": [
-        "buffer",
-        "molecular-biology",
-        "ultrapure"
-      ],
-      "researchAreas": [
-        "Molecular biology",
-        "Electrophoresis"
-      ],
-      "rating": 4.9,
-      "reviewCount": 287,
-      "inStock": true
-    },
-    {
-      "id": "syl-hepes-buffer",
-      "slug": "hepes-buffer-100g",
-      "name": "HEPES Buffer",
-      "categoryId": "biochem-reagents",
-      "shortDescription": "Zwitterionic biological buffer for in-vitro cell-culture and assay work.",
-      "longDescription": "HEPES is a zwitterionic Good's buffer used to maintain physiological pH in in-vitro cell-culture and enzymatic-assay research. Supplied as a high-purity reagent with minimal trace-metal contamination. For Research Use Only. Not for human consumption.",
-      "casNumber": "7365-45-9",
-      "molecularFormula": "C8H18N2O4S",
-      "molarMass": "238.30 g/mol",
-      "purity": "≥99.5%",
-      "form": "Crystalline powder",
-      "size": "100 g",
-      "storage": "Room temperature, protect from light",
-      "price": 61,
-      "currency": "USD",
-      "tags": [
-        "buffer",
-        "cell-culture",
-        "zwitterionic"
-      ],
-      "researchAreas": [
-        "Cell biology",
-        "Biochemistry"
-      ],
-      "rating": 4.8,
-      "reviewCount": 173,
-      "inStock": true
-    },
-    {
-      "id": "syl-bsa-fraction",
-      "slug": "bovine-serum-albumin-fraction-v-25g",
-      "name": "Bovine Serum Albumin (Fraction V)",
-      "categoryId": "biochem-reagents",
-      "shortDescription": "Protein blocking and stabilizing reagent for immunoassays.",
-      "longDescription": "Bovine Serum Albumin (Fraction V) is a versatile protein reagent used for blocking, stabilization, and as a standard in protein-quantitation assays in research laboratories. Heat-shock-fractionated for low protease and IgG content. For Research Use Only. Not for human consumption.",
-      "casNumber": "9048-46-8",
-      "purity": "≥98% (agarose gel electrophoresis)",
-      "form": "Lyophilized powder",
-      "size": "25 g",
-      "storage": "2-8°C, desiccated",
-      "price": 84,
-      "currency": "USD",
-      "tags": [
-        "protein",
-        "blocking-agent",
-        "immunoassay"
-      ],
-      "researchAreas": [
-        "Immunoassays",
-        "Protein chemistry"
-      ],
-      "rating": 4.8,
-      "reviewCount": 156,
-      "inStock": true
-    },
-    {
-      "id": "syl-recon-kit",
-      "slug": "peptide-reconstitution-kit",
-      "name": "Peptide Reconstitution Kit (Bacteriostatic Water + Vials)",
-      "categoryId": "assay-kits",
-      "shortDescription": "Consumables kit for reconstituting lyophilized research peptides in the lab.",
-      "longDescription": "This reconstitution kit bundles sterile-filtered diluent, sterile vials, and labeling supplies for preparing stock solutions of lyophilized research peptides at the bench. Designed to support reproducible in-vitro handling and storage workflows. For Research Use Only. Not for human consumption.",
-      "purity": "N/A (consumables kit)",
-      "form": "Kit (liquid + vials)",
-      "size": "1 kit (10 x 3 mL)",
-      "storage": "Room temperature; reconstituted solutions 2-8°C",
-      "price": 45,
-      "currency": "USD",
-      "badge": "Popular",
-      "tags": [
-        "kit",
-        "consumables",
-        "reconstitution",
-        "accessory"
-      ],
-      "researchAreas": [
-        "Laboratory workflow",
-        "Sample preparation"
-      ],
-      "rating": 4.7,
-      "reviewCount": 204,
-      "inStock": true
+        "Enzyme kinetics"
+      ]
     }
   ]
 }

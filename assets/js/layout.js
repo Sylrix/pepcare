@@ -102,10 +102,11 @@
         <div class="footer__col">
           <h4>Shop</h4>
           <a href="products.html">All compounds</a>
-          <a href="products.html?cat=research-peptides">Research peptides</a>
-          <a href="products.html?cat=amino-acids">Amino acids</a>
-          <a href="products.html?cat=reference-standards">Reference standards</a>
-          <a href="products.html?cat=biochem-reagents">Biochem reagents</a>
+          <a href="nad.html">NAD⁺</a>
+          <a href="ghk-cu.html">GHK-Cu</a>
+          <a href="glow.html">GLOW blend</a>
+          <a href="klow.html">KLOW blend</a>
+          <a href="glutathione.html">L-Glutathione</a>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
@@ -128,7 +129,7 @@
       </p>
       <div class="footer__bottom">
         <span>© <span data-year></span> PepCare. All rights reserved.</span>
-        <span>Built for laboratory research · Demo storefront</span>
+        <span>Built for laboratory research</span>
       </div>
     </div>`;
   document.body.appendChild(footer);

@@ -82,16 +82,31 @@ Your site goes live at **https://sylrix.github.io/pepcare/** (first build takes 
 Rebrand from "PepCare" by replacing the name in `assets/js/layout.js`, `index.html`,
 `about.html`, and `assets/data/*.json`.
 
-## 💳 Going live with payments
+## 📧 Order email notifications (1-step setup)
 
-This is a **demo storefront** — checkout has no live processor. Research compounds are a **high-risk
-category**, so:
+Checkout emails every order to the store owner via [Web3Forms](https://web3forms.com) — no backend needed:
 
-1. Choose a **high-risk-friendly, PCI-compliant** payment gateway (or institutional purchase orders).
-2. **Declare the correct merchant category honestly** on your application — the complete site +
-   policies here are designed to support that and avoid a *misrepresentation* flag.
-3. Wire the gateway into `checkout.js` (or swap in a hosted checkout / Snipcart / Shopify Buy Button).
-4. Connect the contact form (`contact.html`) to a backend (Formspree, Netlify Forms, or your API).
+1. Go to **web3forms.com**, enter the inbox that should receive orders (`sujalparmar586@gmail.com`).
+2. Copy the **Access Key** it emails you.
+3. Paste it into `WEB3FORMS_ACCESS_KEY` near the top of `assets/js/checkout.js`.
+
+Until the key is set, orders are captured and confirmed on-screen but **not** emailed.
+
+## 💳 Going live with real payments
+
+Checkout currently records the customer's **preferred payment method** and emails you the order so you
+can send a secure payment link (a normal flow for high-risk research suppliers). For live card/UPI
+charging:
+
+1. Choose a **high-risk-friendly, PCI-compliant** gateway (Stripe/PayPal/Square prohibit research peptides).
+2. **Declare the correct merchant category honestly** — the complete site + policies here support that
+   and reduce *misrepresentation* risk.
+3. Wire the gateway's hosted checkout / payment-link API into `checkout.js`.
+4. Connect the contact form (`contact.html`) to a backend or the same Web3Forms key.
+
+> Note: Google Shopping / Merchant Center will likely reject peptide SKUs under the **Healthcare &
+> medicines** policy regardless of RUO labelling — the realistic channel is B2B sales to verified
+> research institutions, not consumer Shopping ads.
 
 ## ⚠️ Data accuracy note
 

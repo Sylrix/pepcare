@@ -6,7 +6,7 @@
   <title>Checkout — PepCare</title>
   <meta name="description" content="Secure checkout for research compounds. For Research Use Only — buyers certify legitimate laboratory research use.">
   <meta name="robots" content="noindex, follow">
-  <meta name="theme-color" content="#4F46E5">
+  <meta name="theme-color" content="#7C3AED">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,25 +31,35 @@
           <form class="form-card card" id="checkout-form" novalidate>
             <h2 style="margin-bottom:1.25rem">Contact &amp; shipping</h2>
             <div class="form-row">
-              <div class="field"><label for="co-name">Full name *</label><input class="input" id="co-name" required></div>
-              <div class="field"><label for="co-email">Work email *</label><input class="input" id="co-email" type="email" required></div>
+              <div class="field"><label for="co-name">Full name *</label><input class="input" id="co-name" name="name" required></div>
+              <div class="field"><label for="co-email">Email *</label><input class="input" id="co-email" name="email" type="email" required></div>
             </div>
-            <div class="field" style="margin-top:1rem"><label for="co-org">Institution / company *</label><input class="input" id="co-org" required></div>
-            <div class="field" style="margin-top:1rem"><label for="co-addr">Shipping address *</label><input class="input" id="co-addr" required></div>
             <div class="form-row" style="margin-top:1rem">
-              <div class="field"><label for="co-city">City *</label><input class="input" id="co-city" required></div>
-              <div class="field"><label for="co-country">Country *</label><input class="input" id="co-country" required></div>
+              <div class="field"><label for="co-org">Institution / company *</label><input class="input" id="co-org" name="org" required></div>
+              <div class="field"><label for="co-phone">Phone</label><input class="input" id="co-phone" name="phone" type="tel"></div>
+            </div>
+            <div class="field" style="margin-top:1rem"><label for="co-addr">Shipping address *</label><input class="input" id="co-addr" name="address" required></div>
+            <div class="form-row" style="margin-top:1rem">
+              <div class="field"><label for="co-city">City *</label><input class="input" id="co-city" name="city" required></div>
+              <div class="field"><label for="co-country">Country *</label><input class="input" id="co-country" name="country" required></div>
             </div>
 
-            <h2 style="margin:2rem 0 1.25rem">Payment</h2>
-            <div class="card" style="padding:1.25rem;border-left:3px solid var(--accent);background:var(--surface-2)">
-              <p style="font-weight:600;display:flex;align-items:center;gap:.5rem"><i data-icon="lock"></i> Secure payment gateway connects here</p>
-              <p class="text-muted" style="font-size:var(--text-sm);margin-top:.5rem">This demo has no live payment processor. Research compounds are typically processed through a <strong>high-risk-friendly, PCI-compliant gateway</strong> with the correct merchant category — declared honestly to avoid a misrepresentation review. Plug your processor (e.g. a high-risk acquirer, or institutional purchase orders) in here.</p>
+            <h2 style="margin:2rem 0 1rem">Payment method</h2>
+            <div class="pay-methods" id="pay-methods">
+              <label class="pay-option"><input type="radio" name="payment" value="Credit / Debit Card" checked><span><b>Credit / Debit card</b><small>Visa · Mastercard · Amex</small></span></label>
+              <label class="pay-option"><input type="radio" name="payment" value="UPI"><span><b>UPI</b><small>GPay · PhonePe · Paytm</small></span></label>
+              <label class="pay-option"><input type="radio" name="payment" value="Bank Transfer"><span><b>Bank transfer</b><small>NEFT / wire</small></span></label>
+              <label class="pay-option"><input type="radio" name="payment" value="PayPal"><span><b>PayPal</b><small>Balance / card</small></span></label>
+              <label class="pay-option"><input type="radio" name="payment" value="Purchase Order / Invoice"><span><b>Purchase order</b><small>Pay on invoice</small></span></label>
             </div>
+            <p class="text-muted" style="font-size:var(--text-sm);margin-top:.75rem"><i data-icon="lock" style="vertical-align:-3px"></i> Place your order and we'll email you a secure payment link for your chosen method. Card details are never entered or stored on this site.</p>
 
-            <label class="checkbox" style="margin-top:1.5rem"><input type="checkbox" id="co-ruo" required><span>I certify that I am a qualified researcher or institution and that all products will be used <strong>strictly for laboratory research</strong> — not for human or veterinary consumption — in accordance with the <a href="compliance.html" style="color:var(--primary)">Research Use Only Policy</a> and <a href="terms.html" style="color:var(--primary)">Terms</a>.</span></label>
+            <div class="field" style="margin-top:1.5rem"><label for="co-notes">Order notes (optional)</label><textarea class="textarea" id="co-notes" name="notes" style="min-height:90px" placeholder="Anything we should know about this research order…"></textarea></div>
 
-            <button class="btn btn-primary btn-lg btn-block" type="submit" style="margin-top:1.5rem"><i data-icon="check-circle"></i> Place order (demo)</button>
+            <label class="checkbox" style="margin-top:1.25rem"><input type="checkbox" id="co-ruo" required><span>I certify that I am a qualified researcher or institution and that all products will be used <strong>strictly for laboratory research</strong> — not for human or veterinary consumption — per the <a href="compliance.html" style="color:var(--primary)">Research Use Only Policy</a> and <a href="terms.html" style="color:var(--primary)">Terms</a>.</span></label>
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="co-submit" style="margin-top:1.5rem"><i data-icon="check-circle"></i> Place order</button>
+            <p class="text-muted" style="font-size:var(--text-xs);margin-top:.75rem;text-align:center" id="co-status"></p>
           </form>
         </div>
 
@@ -57,7 +67,7 @@
           <h2 style="margin-bottom:1rem">Order summary</h2>
           <div id="summary-lines"></div>
           <div class="summary-total"><span>Total</span> <b id="summary-total">$0.00</b></div>
-          <p class="text-muted" style="font-size:var(--text-xs);margin-top:1rem"><i data-icon="snowflake" style="vertical-align:-3px"></i> Cold-chain handling &amp; shipping calculated after address verification.</p>
+          <p class="text-muted" style="font-size:var(--text-xs);margin-top:1rem"><i data-icon="snowflake" style="vertical-align:-3px"></i> Cold-chain handling &amp; shipping confirmed after address verification.</p>
           <a class="btn btn-ghost btn-block btn-sm" href="products.html" style="margin-top:1rem">← Continue shopping</a>
         </aside>
       </div>

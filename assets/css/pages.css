@@ -81,12 +81,13 @@
 /* ---------- Catalog toolbar ---------- */
 .catalog-hero { padding-top: var(--space-10); }
 .catalog-toolbar {
-  position: sticky; top: var(--navbar-h); z-index: var(--z-raised);
+  position: sticky; top: calc(var(--navbar-h) + 8px); z-index: var(--z-sticky);
   display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center;
-  padding: var(--space-3); margin-bottom: var(--space-6);
+  padding: var(--space-4); margin-bottom: var(--space-6);
   border-radius: var(--radius-lg);
-  background: color-mix(in srgb, var(--surface-0) 82%, transparent);
-  backdrop-filter: blur(12px); border: 1px solid var(--border-subtle);
+  background: var(--surface-1);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-md);
 }
 .search-box { position: relative; flex: 1 1 240px; }
 .search-box svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--on-surface-muted); width: 18px; height: 18px; }
@@ -173,6 +174,17 @@
 .summary-line:last-of-type { border-bottom: none; }
 .summary-total { display: flex; justify-content: space-between; align-items: baseline; padding-top: var(--space-4); margin-top: var(--space-2); border-top: 2px solid var(--border-default); }
 .summary-total b { font-family: var(--font-display); font-size: var(--text-2xl); }
+
+/* payment method options */
+.pay-methods { display: grid; grid-template-columns: 1fr; gap: var(--space-2); }
+@media (min-width: 480px) { .pay-methods { grid-template-columns: 1fr 1fr; } }
+.pay-option { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); min-height: 56px; border: 1.5px solid var(--border-default); border-radius: var(--radius-md); cursor: pointer; transition: border-color var(--dur-fast) var(--ease-smooth), background var(--dur-fast) var(--ease-smooth); }
+.pay-option:hover { border-color: var(--primary); }
+.pay-option input { accent-color: var(--primary); width: 18px; height: 18px; flex: none; }
+.pay-option:has(input:checked) { border-color: var(--primary); background: var(--primary-soft); }
+.pay-option span { display: flex; flex-direction: column; line-height: 1.25; }
+.pay-option b { font-size: var(--text-sm); }
+.pay-option small { color: var(--on-surface-muted); font-size: var(--text-xs); }
 
 /* ---------- FAQ page ---------- */
 .faq-wrap { max-width: 800px; margin-inline: auto; }

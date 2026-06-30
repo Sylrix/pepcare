@@ -78,7 +78,7 @@
       </div>
       <div class="product-card__body">
         <span class="product-card__cat">${catName(p.categoryId)}</span>
-        <h3 class="product-card__title"><a href="product.html?slug=${p.slug}">${p.name}</a></h3>
+        <h3 class="product-card__title"><a href="${p.slug}.html">${p.name}</a></h3>
         <p class="product-card__desc">${p.shortDescription}</p>
         <div class="product-card__meta">
           <span class="spec-pill">${p.purity}</span>
@@ -184,14 +184,14 @@
 
   // ---------- Product detail ----------
   function initProduct(products) {
-    const slug = new URLSearchParams(location.search).get('slug');
+    const slug = document.body.dataset.slug || new URLSearchParams(location.search).get('slug');
     const p = products.find((x) => x.slug === slug);
     const root = document.getElementById('product-root');
     if (!p) { root.innerHTML = `<div class="empty-state"><h2>Product not found</h2><p class="text-muted">This compound may have been moved.</p><a class="btn btn-primary" href="products.html">Back to catalog</a></div>`; return; }
 
     document.title = `${p.name} — PepCare`;
     const BASE = 'https://sylrix.github.io/pepcare/';
-    const pageUrl = BASE + 'product.html?slug=' + p.slug;
+    const pageUrl = BASE + p.slug + '.html';
     const upsertMeta = (sel, val) => {
       let el = document.head.querySelector(sel);
       if (!el) {
