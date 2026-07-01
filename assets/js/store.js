@@ -29,6 +29,14 @@
     // works at user-site root and project subpath; pages are all flat at root
     return '';
   }
+  function assetVersion() {
+    // reuse the ?v=N stamped on this script so data busts cache with each deploy
+    try {
+      const s = document.querySelector('script[src*="store.js"]');
+      const m = s && s.src.match(/[?&]v=(\d+)/);
+      return m ? m[1] : '';
+    } catch (e) { return ''; }
+  }
   function pruneCart(products) {
     // drop cart lines whose product no longer exists (e.g. discontinued item)
     const ids = new Set((products || []).map((p) => p.id));
@@ -37,7 +45,8 @@
   }
   function loadCatalog() {
     if (!catalogPromise) {
-      catalogPromise = fetch(basePrefix() + 'assets/data/products.json')
+      const v = assetVersion();
+      catalogPromise = fetch(basePrefix() + 'assets/data/products.json' + (v ? '?v=' + v : ''))
         .then((r) => { if (!r.ok) throw new Error('catalog ' + r.status); return r.json(); })
         .then((data) => { pruneCart(data.products); return data; })
         .catch((e) => { console.error('Catalog load failed', e); return { categories: [], products: [] }; });
