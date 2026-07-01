@@ -75,7 +75,9 @@
     foot.hidden = false;
     body.innerHTML = lines.map((l) => `
       <div class="cart-line">
-        <div class="cart-line__thumb">${vialThumb}</div>
+        <div class="cart-line__thumb">${l.product.image
+          ? `<picture><source srcset="${l.product.image.replace(/\.png$/, '.webp')}" type="image/webp"><img src="${l.product.image}" alt="${l.product.name}" loading="lazy" decoding="async"></picture>`
+          : vialThumb}</div>
         <div>
           <div class="cart-line__name">${l.product.name}</div>
           <div class="cart-line__meta">${l.product.size} · ${store.money(l.product.price, l.product.currency)}</div>
