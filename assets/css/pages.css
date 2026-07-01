@@ -51,6 +51,10 @@
 .hero-prod--left img { animation: float-slow 9s var(--ease-smooth) infinite; }
 .hero-prod--right { transform: rotate(7deg); }
 .hero-prod--right img { animation: bob-rotate 8s var(--ease-smooth) infinite; }
+/* two-vial hero (NAD+ and Glutathione) */
+.hero-products--two .hero-prod { width: 45%; }
+.hero-products--two .hero-prod--left { z-index: 2; margin-right: -3%; }
+.hero-products--two .hero-prod--right { z-index: 1; margin-bottom: 5%; }
 @media (prefers-reduced-motion: reduce) { .hero-prod img { animation: none !important; } }
 .lab-flask { width: 64%; margin-inline: auto; display: block; color: var(--on-surface); }
 .bubble { animation: rise 3s var(--ease-smooth) infinite; }

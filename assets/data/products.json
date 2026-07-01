@@ -1,15 +1,9 @@
 {
   "categories": [
     {
-      "id": "research-peptides",
-      "name": "Research Peptides",
-      "description": "Synthetic peptides and peptide blends for in-vitro biochemical research. For laboratory research use only.",
-      "icon": "peptide"
-    },
-    {
       "id": "biochem-reagents",
       "name": "Biochemical Reagents",
-      "description": "Coenzymes and small-molecule reagents supporting in-vitro enzymatic and metabolic research.",
+      "description": "High-purity reference materials for in-vitro laboratory research. For Research Use Only.",
       "icon": "reagent"
     }
   ],
@@ -17,13 +11,10 @@
     {
       "id": "syl-nad",
       "slug": "nad",
-      "name": "NAD⁺ (β-Nicotinamide Adenine Dinucleotide)",
+      "name": "NAD+",
       "categoryId": "biochem-reagents",
-      "shortDescription": "Coenzyme reference reagent for in-vitro redox and enzymatic assays.",
-      "longDescription": "β-Nicotinamide adenine dinucleotide (NAD⁺) is a redox coenzyme used as a substrate and cofactor in in-vitro enzymatic and metabolic assays. Supplied as a high-purity lyophilized powder for laboratory research workflows. For Research Use Only. Not for human or veterinary consumption.",
-      "casNumber": "53-84-9",
-      "molecularFormula": "C21H27N7O14P2",
-      "molarMass": "663.43 g/mol",
+      "shortDescription": "High-purity reference material for in-vitro laboratory research use.",
+      "longDescription": "Supplied as a high-purity lyophilized powder for in-vitro laboratory research and analytical reference. For Research Use Only. Not for human or veterinary consumption.",
       "purity": "≥98% (HPLC)",
       "form": "Lyophilized powder",
       "size": "500 mg",
@@ -35,145 +26,36 @@
       "priority": 100,
       "image": "assets/img/products/NA.png",
       "tags": [
-        "coenzyme",
-        "redox",
-        "reagent"
+        "reference",
+        "research-use-only"
       ],
       "researchAreas": [
-        "Redox biochemistry",
-        "Enzyme kinetics",
-        "Cell metabolism (in vitro)"
-      ]
-    },
-    {
-      "id": "syl-ghk-cu",
-      "slug": "ghk-cu",
-      "name": "GHK-Cu (Copper Tripeptide-1)",
-      "categoryId": "research-peptides",
-      "shortDescription": "Copper-binding tripeptide reference compound for in-vitro research.",
-      "longDescription": "GHK-Cu is the copper(II) complex of the tripeptide glycyl-L-histidyl-L-lysine, used as a reference compound in in-vitro studies of metal-peptide coordination and matrix biology. Supplied as a characterized lyophilized powder for laboratory research. For Research Use Only. Not for human or veterinary consumption.",
-      "casNumber": "89030-95-5",
-      "molecularFormula": "C14H24N6O4·Cu",
-      "molarMass": "~403.9 g/mol (Cu complex)",
-      "purity": "≥98% (HPLC)",
-      "form": "Lyophilized powder",
-      "size": "50 mg",
-      "storage": "-20°C, desiccated, protect from light",
-      "price": 64,
-      "currency": "USD",
-      "sequence": "Gly-His-Lys (Cu²⁺ complex)",
-      "inStock": true,
-      "badge": "New",
-      "priority": 99,
-      "image": "assets/img/products/GK.png",
-      "tags": [
-        "tripeptide",
-        "copper-peptide",
-        "GHK"
-      ],
-      "researchAreas": [
-        "Peptide chemistry",
-        "Matrix biology (in vitro)"
-      ]
-    },
-    {
-      "id": "syl-glow",
-      "slug": "glow",
-      "name": "GLOW Research Blend",
-      "categoryId": "research-peptides",
-      "shortDescription": "Multi-peptide reference blend (GHK-Cu · BPC-157 · TB-500) for in-vitro research.",
-      "longDescription": "GLOW is a multi-peptide reference blend containing GHK-Cu, BPC-157, and TB-500, supplied as a single characterized lyophilizate for in-vitro laboratory research and analytical method development. Component identities are confirmed by HPLC. This product makes no therapeutic, cosmetic, or efficacy claims. For Research Use Only. Not for human or veterinary consumption.",
-      "purity": "Each component ≥98% (HPLC)",
-      "form": "Lyophilized powder (multi-peptide blend)",
-      "size": "70 mg",
-      "storage": "-20°C, desiccated, protect from light",
-      "price": 139,
-      "currency": "USD",
-      "inStock": true,
-      "badge": "Best Seller",
-      "priority": 98,
-      "image": "assets/img/products/GLO.png",
-      "tags": [
-        "peptide-blend",
-        "GHK-Cu",
-        "BPC-157",
-        "TB-500"
-      ],
-      "researchAreas": [
-        "Peptide research (in vitro)",
-        "Analytical method development"
-      ],
-      "components": [
-        "GHK-Cu",
-        "BPC-157",
-        "TB-500"
-      ]
-    },
-    {
-      "id": "syl-klow",
-      "slug": "klow",
-      "name": "KLOW Research Blend",
-      "categoryId": "research-peptides",
-      "shortDescription": "Multi-peptide reference blend (GHK-Cu · BPC-157 · TB-500 · KPV) for in-vitro research.",
-      "longDescription": "KLOW is a multi-peptide reference blend containing GHK-Cu, BPC-157, TB-500, and KPV, supplied as a single characterized lyophilizate for in-vitro laboratory research and analytical reference. Component identities are confirmed by HPLC. This product makes no therapeutic, cosmetic, or efficacy claims. For Research Use Only. Not for human or veterinary consumption.",
-      "purity": "Each component ≥98% (HPLC)",
-      "form": "Lyophilized powder (multi-peptide blend)",
-      "size": "80 mg",
-      "storage": "-20°C, desiccated, protect from light",
-      "price": 169,
-      "currency": "USD",
-      "inStock": true,
-      "badge": "New",
-      "priority": 97,
-      "image": "assets/img/products/KLO.png",
-      "tags": [
-        "peptide-blend",
-        "GHK-Cu",
-        "BPC-157",
-        "TB-500",
-        "KPV"
-      ],
-      "researchAreas": [
-        "Peptide research (in vitro)",
-        "Analytical method development"
-      ],
-      "components": [
-        "GHK-Cu",
-        "BPC-157",
-        "TB-500",
-        "KPV"
+        "Laboratory research (in vitro)"
       ]
     },
     {
       "id": "syl-glutathione",
       "slug": "glutathione",
-      "name": "L-Glutathione (Reduced, GSH)",
+      "name": "Glutathione",
       "categoryId": "biochem-reagents",
-      "shortDescription": "Reduced glutathione tripeptide reference reagent for in-vitro redox assays.",
-      "longDescription": "L-Glutathione (reduced) is a thiol-containing tripeptide used as a substrate and antioxidant cofactor in in-vitro biochemical assays. Supplied as a high-purity lyophilized powder for laboratory research including enzyme kinetics and redox-state studies. For Research Use Only. Not for human or veterinary consumption.",
-      "casNumber": "70-18-8",
-      "molecularFormula": "C10H17N3O6S",
-      "molarMass": "307.32 g/mol",
+      "shortDescription": "High-purity reference material for in-vitro laboratory research use.",
+      "longDescription": "Supplied as a high-purity lyophilized powder for in-vitro laboratory research and analytical reference. For Research Use Only. Not for human or veterinary consumption.",
       "purity": "≥98% (HPLC)",
       "form": "Lyophilized powder",
       "size": "600 mg",
       "storage": "-20°C, desiccated, protect from light",
       "price": 42,
       "currency": "USD",
-      "sequence": "γ-Glu-Cys-Gly",
       "inStock": true,
       "badge": "Popular",
-      "priority": 96,
+      "priority": 99,
       "image": "assets/img/products/GLUT.png",
       "tags": [
-        "tripeptide",
-        "antioxidant-reagent",
-        "thiol",
-        "redox"
+        "reference",
+        "research-use-only"
       ],
       "researchAreas": [
-        "Redox biochemistry",
-        "Enzyme kinetics"
+        "Laboratory research (in vitro)"
       ]
     }
   ]

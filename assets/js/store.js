@@ -29,10 +29,17 @@
     // works at user-site root and project subpath; pages are all flat at root
     return '';
   }
+  function pruneCart(products) {
+    // drop cart lines whose product no longer exists (e.g. discontinued item)
+    const ids = new Set((products || []).map((p) => p.id));
+    const kept = cart.filter((l) => ids.has(l.id));
+    if (kept.length !== cart.length) { cart = kept; emit(); }
+  }
   function loadCatalog() {
     if (!catalogPromise) {
       catalogPromise = fetch(basePrefix() + 'assets/data/products.json')
         .then((r) => { if (!r.ok) throw new Error('catalog ' + r.status); return r.json(); })
+        .then((data) => { pruneCart(data.products); return data; })
         .catch((e) => { console.error('Catalog load failed', e); return { categories: [], products: [] }; });
     }
     return catalogPromise;

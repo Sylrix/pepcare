@@ -26,11 +26,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"></noscript>
-  <link rel="stylesheet" href="assets/css/tokens.css?v=7">
-  <link rel="stylesheet" href="assets/css/base.css?v=7">
-  <link rel="stylesheet" href="assets/css/components.css?v=7">
-  <link rel="stylesheet" href="assets/css/animations.css?v=7">
-  <link rel="stylesheet" href="assets/css/pages.css?v=7">
+  <link rel="stylesheet" href="assets/css/tokens.css?v=8">
+  <link rel="stylesheet" href="assets/css/base.css?v=8">
+  <link rel="stylesheet" href="assets/css/components.css?v=8">
+  <link rel="stylesheet" href="assets/css/animations.css?v=8">
+  <link rel="stylesheet" href="assets/css/pages.css?v=8">
   <script>(function(){try{var t=localStorage.getItem('sylrix.theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}document.documentElement.classList.add('js');})();</script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"PepCare","url":"https://sylrix.github.io/pepcare/","description":"Supplier of high-purity, third-party-verified research compounds for laboratory use only.","logo":"https://sylrix.github.io/pepcare/assets/img/favicon.svg"}
@@ -62,18 +62,14 @@
 
         <div class="hero__visual" data-reveal="scale">
           <div class="lab-scene">
-            <div class="hero-products">
-              <picture class="hero-prod hero-prod--side hero-prod--left">
+            <div class="hero-products hero-products--two">
+              <picture class="hero-prod hero-prod--left">
                 <source srcset="assets/img/products/NA.webp" type="image/webp">
-                <img src="assets/img/products/NA.png" alt="PepCare NAD⁺ research vial" decoding="async">
+                <img src="assets/img/products/NA.png" alt="PepCare NAD+ research vial" fetchpriority="high" decoding="async">
               </picture>
-              <picture class="hero-prod hero-prod--main">
-                <source srcset="assets/img/products/GLO.webp" type="image/webp">
-                <img src="assets/img/products/GLO.png" alt="PepCare GLOW research blend vial" fetchpriority="high" decoding="async">
-              </picture>
-              <picture class="hero-prod hero-prod--side hero-prod--right">
-                <source srcset="assets/img/products/GK.webp" type="image/webp">
-                <img src="assets/img/products/GK.png" alt="PepCare GHK-Cu research vial" decoding="async">
+              <picture class="hero-prod hero-prod--right">
+                <source srcset="assets/img/products/GLUT.webp" type="image/webp">
+                <img src="assets/img/products/GLUT.png" alt="PepCare Glutathione research vial" decoding="async">
               </picture>
             </div>
             <span class="orbit-chip c1 float"><i data-icon="shield-check"></i> 99%+ purity</span>
@@ -107,7 +103,7 @@
     <div class="container">
       <div class="stats-band card" style="padding:clamp(1.5rem,4vw,2.5rem)" data-reveal-stagger>
         <div class="stat"><div class="stat__num"><span data-count="99">0</span>%+</div><div class="stat__label">Verified purity on every catalog item</div></div>
-        <div class="stat"><div class="stat__num"><span data-count="20">0</span>+</div><div class="stat__label">Research compounds in catalog</div></div>
+        <div class="stat"><div class="stat__num">$<span data-count="14">0</span></div><div class="stat__label">Flat-rate tracked shipping</div></div>
         <div class="stat"><div class="stat__num"><span data-count="100">0</span>%</div><div class="stat__label">Batches shipped with a COA</div></div>
         <div class="stat"><div class="stat__num"><span data-count="24">0</span>h</div><div class="stat__label">Typical dispatch on in-stock orders</div></div>
       </div>
@@ -165,7 +161,7 @@
         <h2>From catalog to bench in four steps</h2>
       </div>
       <div class="steps" data-reveal-stagger>
-        <div class="step card"><div class="step__num">1</div><h3>Browse the catalog</h3><p>Search by compound, CAS number, or research area. Purity, format, and storage are shown on every listing.</p></div>
+        <div class="step card"><div class="step__num">1</div><h3>Browse the catalog</h3><p>Search by product name or research area. Purity, format, and storage are shown on every listing.</p></div>
         <div class="step card"><div class="step__num">2</div><h3>Verify the COA</h3><p>Review the batch-specific Certificate of Analysis before you buy, identity, purity, and third-party data.</p></div>
         <div class="step card"><div class="step__num">3</div><h3>Order securely</h3><p>Confirm your research use, check out through our secure compliant gateway, and get clear order tracking.</p></div>
         <div class="step card"><div class="step__num">4</div><h3>Fast, careful dispatch</h3><p>In-stock orders typically ship within 24 hours, packed with cold-chain protection and full documentation.</p></div>
@@ -220,11 +216,11 @@
 
 </main>
 
-<script src="assets/js/icons.js?v=7" defer></script>
-<script src="assets/js/store.js?v=7" defer></script>
-<script src="assets/js/layout.js?v=7" defer></script>
-<script src="assets/js/cart.js?v=7" defer></script>
-<script src="assets/js/catalog.js?v=7" defer></script>
-<script src="assets/js/hero.js?v=7" defer></script>
+<script src="assets/js/icons.js?v=8" defer></script>
+<script src="assets/js/store.js?v=8" defer></script>
+<script src="assets/js/layout.js?v=8" defer></script>
+<script src="assets/js/cart.js?v=8" defer></script>
+<script src="assets/js/catalog.js?v=8" defer></script>
+<script src="assets/js/hero.js?v=8" defer></script>
 </body>
 </html>

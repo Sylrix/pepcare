@@ -156,12 +156,9 @@
         </div>
         <div class="footer__col">
           <h4>Shop</h4>
-          <a href="products.html">All compounds</a>
-          <a href="nad.html">NAD⁺</a>
-          <a href="ghk-cu.html">GHK-Cu</a>
-          <a href="glow.html">GLOW blend</a>
-          <a href="klow.html">KLOW blend</a>
-          <a href="glutathione.html">L-Glutathione</a>
+          <a href="products.html">All products</a>
+          <a href="nad.html">NAD+</a>
+          <a href="glutathione.html">Glutathione</a>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
